@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
-import { Package, Globe2, LifeBuoy, ShieldCheck, File } from "lucide-react"; 
+
 
 
 

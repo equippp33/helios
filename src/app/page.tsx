@@ -7,6 +7,7 @@ import Sec2 from "./_components/sec2";
 import Navbar from "./_components/navbar";
 import Sec3 from "./_components/sec3";
 import Footer from "./_components/footer";
+import Sec4 from "./_components/sec4";
 
 
 export default async function Home() {
@@ -22,6 +23,7 @@ export default async function Home() {
        </section>
        <section><Sec2/></section>
        <section><Sec3/></section>
+       <section><Sec4/></section>
        <section><Footer/></section>
       </main>
     </HydrateClient>
