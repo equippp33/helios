@@ -10,7 +10,7 @@ const Sec3 = () => {
         <div className='bg-gray-400 h-[1px] w-full'></div>
         <div className='flex relative overflow-hidden bg-no-repeat px-4 bg-[length:90%_auto] bg-[position:center_top] w-full'
              style={{ backgroundImage: "url('/worldmap.svg')", backgroundSize:'contain'}}>
-                 <div className="w-1/3 h-fit animate-moveX">
+                 <div className="w-1/3 h-fit animate-movecontainer">
                    <Image
                      src="/container.svg"
                      alt="container"

@@ -10,7 +10,7 @@ const Sec4 = () => {
         </div>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 p-2 mb-8'>
             <div
-              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-full group h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
             >
               
         
@@ -25,13 +25,13 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-yellow-400 flex items-center justify-center z-20">
+              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>
 
             <div
-              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/spares.svg')] hover:bg-cover hover:bg-center"
             >
               
         
@@ -46,13 +46,13 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-yellow-400 flex items-center justify-center z-20">
+              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>
 
             <div
-              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/systems.svg')] hover:bg-cover hover:bg-center"
             >
               
         
@@ -67,13 +67,13 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-yellow-400 flex items-center justify-center z-20">
+              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>
 
             <div
-              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/mechanical.svg')] hover:bg-cover hover:bg-center"
             >
               
         
@@ -88,7 +88,7 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-yellow-400 flex items-center justify-center z-20">
+              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>

@@ -1,27 +1,31 @@
-import type { Config } from "tailwindcss";
-import  fontFamily  from "tailwindcss/defaultTheme";
-import animate from "tailwindcss-animate";
+// tailwind.config.ts
+
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  
-  content: ["./src/**/*.tsx"],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
-      fontFamily: {
-        grotesk: ["'Space Grotesk'", "sans-serif"]
-      },
-       keyframes: {
-        moveX: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" },
+      keyframes: {
+        // Define the 'slide-left' animation keyframes
+        'slide-left': {
+          // 0% (Start): Move the element 100% of its own width to the right (off-screen)
+          '0%': { transform: 'translateX(100%)' }, 
+          // 100% (End): Move the element 100% of its own width to the left (off-screen)
+          '100%': { transform: 'translateX(-100%)' }, 
         },
       },
       animation: {
-        moveX: "moveX 5s linear infinite",
+        // Apply the keyframes with a duration, speed, and iteration count
+        'movecontainer': 'slide-left 25s linear infinite', // 25s duration, linear speed, infinite loop
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 
 export default config;
