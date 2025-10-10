@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Space_Grotesk, Geist } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
 
@@ -11,21 +11,17 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
+const openSans = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const grotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-grotesk",
+  variable: "--font-open-sans",
+  display: "swap",
 });
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${grotesk.variable}`}>
+    <html lang="en" className={`${openSans.variable}`}>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>

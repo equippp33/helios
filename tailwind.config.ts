@@ -21,7 +21,7 @@ const config: Config = {
       },
       animation: {
         // Apply the keyframes with a duration, speed, and iteration count
-        'movecontainer': 'slide-left 25s linear infinite', // 25s duration, linear speed, infinite loop
+        'move': 'slide-left 10s linear infinite', // 25s duration, linear speed, infinite loop
       },
     },
   },

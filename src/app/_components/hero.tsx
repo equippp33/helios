@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 type ContentKey = 1 | 2 | 3;
 
-const Sec1 = () => {
+const Hero = () => {
   const [active, setActive] = useState<ContentKey>(1);
 
   const content: Record<ContentKey, { title: string; subtitle: string; button: string }> = {
@@ -68,4 +68,4 @@ const Sec1 = () => {
   );
 }
 
-export default Sec1;
+export default Hero;

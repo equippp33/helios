@@ -2,7 +2,7 @@ import Link from "next/link";
 import '../styles/globals.css';
 
 import { HydrateClient } from "~/trpc/server";
-import Sec1 from "./_components/sec1";
+import Hero from "./_components/hero";
 import Sec2 from "./_components/sec2";
 import Navbar from "./_components/navbar";
 import Sec3 from "./_components/sec3";
@@ -24,7 +24,7 @@ export default async function Home() {
        <Navbar/>
        <section className="flex items-center justify-center min-h-screen bg-cover bg-center "
                 style={{ backgroundImage: "url('/ship.svg')" }}>
-                <Sec1/>
+                <Hero/>
        </section>
        <section><Sec2/></section>
        <section><Sec3/></section>
