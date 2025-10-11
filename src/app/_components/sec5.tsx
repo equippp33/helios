@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 type Offering = {
@@ -18,25 +19,25 @@ const offerings = [
     id: "02",
     title: "Waste Oil & Sludge Management",
     description: "Safe and compliant removal of sludge and waste oil from vessels",
-    image: "/offering1.svg",
+    image: "/sludgemanagement.svg",
   },
   {
     id: "03",
     title: "Marine Provisions",
     description: "Fresh, frozen, and dry food supplies tailored for every crew’s needs",
-    image: "/offering1.svg",
+    image: "/marineprovisions.svg",
   },
   {
     id: "04",
     title: "Lifeboat & Safety Certification",
     description: "Professional inspection and certification services for lifeboats and life rafts",
-    image: "/offering1.svg",
+    image: "/lifeboat.svg",
   },
   {
     id: "05",
     title: "Navigation & Electronics",
     description: "Maintenance and repair for navigation systems and electronic instruments",
-    image: "/ship.svg",
+    image: "/navigation.svg",
   },
 ];
 
@@ -53,7 +54,9 @@ const OfferingRow = ({ id, title, description, image }: Offering) => {
 
       {/* Hover Image - shown only on hover */}
       <div className="hidden group-hover:block absolute right-0 top-1/2 -translate-y-1/2">
-        <img
+        <Image
+          width={40}
+          height={20}
           src={image}
           alt="Preview"
           className="w-40 h-20 object-cover rounded shadow-lg transition-opacity duration-300"

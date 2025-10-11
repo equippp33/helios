@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import '../styles/globals.css';
 
@@ -12,6 +13,10 @@ import Sec5 from "./_components/sec5";
 import Sec6 from "./_components/sec6";
 import Sec7 from "./_components/sec7";
 import Sec8 from "./_components/sec8";
+import Companies from "./_components/sec9";
+
+
+
 
 
 
@@ -33,6 +38,8 @@ export default async function Home() {
        <section><Sec6/></section>
        <section><Sec7/></section>
        <section><Sec8/></section>
+       <section className="flex w-full justify-center items-center p-4"><Companies/></section>
+       
        
        <section><Footer/></section>
       </main>

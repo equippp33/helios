@@ -37,7 +37,7 @@ const Sec6 = () => {
                 <p className='text-gray-600 text-lg md:text-2xl'>At Helios Shipping and Trading, we provide marine and industrial supplies, including provisions, technical stores, and round-the-clock support at all major Indian ports.</p>
                 <div className='flex flex-col gap-8'>
                     <div className='flex flex-row gap-2'>
-                        <Image src='/shipicon.svg' alt='shipicon' width={50} height={50} className='bg-[#316CE6] p-2 rounded-2xl'/>
+                        <Image src='/shipicon.svg' alt='shipicon' width={60} height={60} className='bg-[#316CE6] rounded-2xl'/>
                         <div className='flex flex-col gap-1'>
                             <h3 className='font-semibold text-lg'>Comprehensive Services</h3>
                             <p className='text-black text-sm md:text-base'>Everything from provisions to technical support in one place</p>
@@ -46,7 +46,7 @@ const Sec6 = () => {
 
                     </div>
                     <div className='flex flex-row gap-2'>
-                        <Image src='/shipicon2.svg' alt='shipicon' width={50} height={50} className='bg-[#316CE6] p-2 rounded-2xl'/>
+                        <Image src='/shipicon2.svg' alt='shipicon' width={60} height={60} className='bg-[#316CE6] rounded-2xl'/>
                         <div className='flex flex-col gap-1'>
                             <h3 className='font-semibold text-lg'>Nationwide Coverage</h3>
                             <p className='text-black text-sm md:text-base'>Seamless delivery and service at all Indian ports.</p>

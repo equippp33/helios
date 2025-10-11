@@ -10,16 +10,16 @@ const Sec4 = () => {
         </div>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 p-2 mb-8'>
             <div
-              className="relative group w-full group h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
             >
               
         
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold">Ship Chandling & Provisions</h2>
+                  <h2 className="text-2xl font-semibold">Ship Chandling & Provisions</h2>
                 </div>
-                <p className="text-sm">
+                <p className="text-lg">
                   Dependable ship chandling with fresh supplies, delivered 24/7 to every major port.
                 </p>
               </div>
@@ -31,16 +31,16 @@ const Sec4 = () => {
             </div>
 
             <div
-              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/spares.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/spares.svg')] hover:bg-cover hover:bg-center"
             >
               
         
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold">Technical Stores & Spare Parts</h2>
+                  <h2 className="text-2xl font-semibold">Technical Stores & Spare Parts</h2>
                 </div>
-                <p className="text-sm">
+                <p className="text-lg">
                  Complete deck, engine, and electrical supplies to ensure your vessel operates flawlessly.
                 </p>
               </div>
@@ -52,16 +52,16 @@ const Sec4 = () => {
             </div>
 
             <div
-              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/systems.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/systems.svg')] hover:bg-cover hover:bg-center"
             >
               
         
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold">Safety Systems & Certification</h2>
+                  <h2 className="text-2xl font-semibold">Safety Systems & Certification</h2>
                 </div>
-                <p className="text-sm">
+                <p className="text-lg">
                   Certified inspections and servicing to guarantee compliance and protect your crew.
                 </p>
               </div>
@@ -73,16 +73,16 @@ const Sec4 = () => {
             </div>
 
             <div
-              className="relative group w-full  h-70 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/mechanical.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 bg-transparent hover:bg-[url('/mechanical.svg')] hover:bg-cover hover:bg-center"
             >
               
         
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold">Mechanical & Technical Services</h2>
+                  <h2 className="text-2xl font-semibold">Mechanical & Technical Services</h2>
                 </div>
-                <p className="text-sm">
+                <p className="text-lg " >
                   Professional repair and maintenance, onboard or at port, whenever you need it.
                 </p>
               </div>
