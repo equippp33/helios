@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
 
@@ -17,12 +18,18 @@ const openSans = Open_Sans({
   display: "swap",
 });
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${openSans.variable}`}>
-      <body>
+    <html lang="en" className={`${openSans.variable} ${spaceGrotesk.variable}`}>
+      <body className={openSans.className}>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>

@@ -19,18 +19,35 @@ interface MarkerType {
 const geoUrl = 'https://raw.githubusercontent.com/geohacker/india/master/state/india_telengana.geojson';
 
 const markers: MarkerType[] = [
+  // West Coast Ports
+  { name: 'Okha', coordinates: [69.0833, 22.4667] } as const,
+  { name: 'Kandla', coordinates: [70.2167, 23.0333] } as const,
+  { name: 'Gandhidham', coordinates: [70.1333, 23.0833] } as const,
+  { name: 'Jamnagar', coordinates: [70.0667, 22.4667] } as const,
+  { name: 'Pipavav', coordinates: [71.5167, 20.9167] } as const,
+  { name: 'Sikka', coordinates: [69.8333, 22.4333] } as const,
+  { name: 'Mundra', coordinates: [69.7167, 22.8333] } as const,
   { name: 'Mumbai', coordinates: [72.8777, 19.0760] } as const,
-  { name: 'Chennai', coordinates: [80.2707, 13.0827] } as const,
-  { name: 'Kolkata', coordinates: [88.3639, 22.5726] } as const,
-  { name: 'Hyderabad', coordinates: [78.4867, 17.3850] } as const,
-  { name: 'Bangalore', coordinates: [77.5946, 12.9716] } as const,
+  { name: 'Mumbai / Jnpt', coordinates: [72.9500, 18.9667] } as const,
+  { name: 'Nhava Sheva', coordinates: [72.9500, 18.9667] } as const,
+  { name: 'Mormugao (Goa)', coordinates: [73.8063, 15.4167] } as const,
+  { name: 'Mangalore', coordinates: [74.8560, 12.9141] } as const,
   { name: 'Cochin', coordinates: [76.2673, 9.9312] } as const,
-  { name: 'New Delhi', coordinates: [77.2090, 28.6139] } as const,
-  { name: 'Gurgaon', coordinates: [77.0266, 28.4595] } as const,
-  { name: 'Pune', coordinates: [73.8567, 18.5204] } as const,
-  { name: 'Ahmedabad', coordinates: [72.5714, 23.0225] } as const,
-  { name: 'Nashik', coordinates: [73.7898, 19.9975] } as const,
-  { name: 'Nagpur', coordinates: [79.0882, 21.1458] } as const
+  
+  // East Coast Ports
+  { name: 'Kolkata', coordinates: [88.3639, 22.5726] } as const,
+  { name: 'Haldia', coordinates: [88.0602, 22.0540] } as const,
+  { name: 'Dhamra', coordinates: [86.8833, 20.9167] } as const,
+  { name: 'Paradip', coordinates: [86.6100, 20.2649] } as const,
+  { name: 'Visakhapatnam', coordinates: [83.2185, 17.6868] } as const,
+  { name: 'Kakinada', coordinates: [82.2333, 16.9333] } as const,
+  { name: 'Karaikal', coordinates: [79.8380, 10.9254] } as const,
+  { name: 'Krishnapatnam', coordinates: [80.1167, 14.2333] } as const,
+  { name: 'Chennai', coordinates: [80.2707, 13.0827] } as const,
+  { name: 'Ennore', coordinates: [80.3318, 13.2333] } as const,
+  
+  // Maritime Lawyers (South)
+  { name: 'Maritime Lawyers', coordinates: [78.0000, 8.5000] } as const
 ];
 
 interface SimpleIndiaMapProps {
@@ -160,10 +177,10 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          scale: 1300
+          scale: 1080
         }}
-        width={1500}
-        height={1600}
+        width={1200}
+        height={1500}
       >
         <ZoomableGroup 
           center={[78, 22]} 
