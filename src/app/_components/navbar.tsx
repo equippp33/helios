@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { MenuIcon, PhoneIcon, X } from 'lucide-react'
+import Link from 'next/link'
 
 const Navbar = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
