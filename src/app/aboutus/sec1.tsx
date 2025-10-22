@@ -14,7 +14,7 @@ const Sec1 = () => {
           loop
           playsInline
         >
-          <source src="/video1.webm" type="video/webm" />
+          <source src="https://images.equippp.global/Video1.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         
