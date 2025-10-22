@@ -40,7 +40,7 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      const result = await response.json() as { error?: string };
 
       if (response.ok) {
         setSubmitStatus({
@@ -59,7 +59,7 @@ const Contact = () => {
       } else {
         setSubmitStatus({
           type: 'error',
-          message: result.error || 'Something went wrong. Please try again.'
+          message: result.error ?? 'Something went wrong. Please try again.'
         });
       }
     } catch (error) {

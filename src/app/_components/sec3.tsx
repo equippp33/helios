@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const Sec3 = (): JSX.Element => {
+const Sec3 = (): React.JSX.Element => {
   const features = [
     {
       icon: "/package.svg",

@@ -86,15 +86,15 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
     if (typeof image === 'string') {
       return { src: image, alt: '' };
     }
-    return { src: image.src || '', alt: image.alt || '' };
+    return { src: image.src ?? '', alt: image.alt ?? '' };
   });
 
   const usedImages = Array.from({ length: totalSlots }, (_, i) => normalizedImages[i % normalizedImages.length]);
 
   return coords.map((c, i) => ({
     ...c,
-    src: usedImages[i]?.src || '',
-    alt: usedImages[i]?.alt || ''
+    src: usedImages[i]?.src ?? '',
+    alt: usedImages[i]?.alt ?? ''
   }));
 }
 
@@ -179,7 +179,9 @@ export default function DomeGallery({
     const root = rootRef.current;
     if (!root) return;
     const ro = new ResizeObserver(entries => {
-      const cr = entries[0].contentRect;
+      const entry = entries[0];
+      if (!entry) return;
+      const cr = entry.contentRect;
       const w = Math.max(1, cr.width),
         h = Math.max(1, cr.height);
       const minDim = Math.min(w, h),
@@ -284,7 +286,7 @@ export default function DomeGallery({
         stopInertia();
 
         const evt = event as PointerEvent;
-        pointerTypeRef.current = (evt.pointerType as any) || 'mouse';
+        pointerTypeRef.current = (evt.pointerType as 'mouse' | 'pen' | 'touch') ?? 'mouse';
         if (pointerTypeRef.current === 'touch') evt.preventDefault();
         if (pointerTypeRef.current === 'touch') lockScroll();
         draggingRef.current = true;
@@ -292,8 +294,8 @@ export default function DomeGallery({
         movedRef.current = false;
         startRotRef.current = { ...rotationRef.current };
         startPosRef.current = { x: evt.clientX, y: evt.clientY };
-        const potential = (evt.target as Element).closest?.('.item__image') as HTMLElement | null;
-        tapTargetRef.current = potential || null;
+        const potential = (evt.target as Element).closest?.('.item__image');
+        tapTargetRef.current = potential as HTMLElement | null;
       },
       onDrag: ({ event, last, velocity: velArr = [0, 0], direction: dirArr = [0, 0], movement }) => {
         if (focusedElRef.current || !draggingRef.current || !startPosRef.current) return;
@@ -336,7 +338,7 @@ export default function DomeGallery({
             }
           }
 
-          let [vMagX, vMagY] = velArr;
+          const [vMagX, vMagY] = velArr;
           const [dirX, dirY] = dirArr;
           let vx = vMagX * dirX;
           let vy = vMagY * dirY;
@@ -374,7 +376,7 @@ export default function DomeGallery({
     openingRef.current = true;
     openStartedAtRef.current = performance.now();
     lockScroll();
-    const parent = el.parentElement as HTMLElement;
+    const parent = el.parentElement!;
     focusedElRef.current = el;
     el.setAttribute('data-focused', 'true');
     const offsetX = getDataNumber(parent, 'offsetX', 0);
@@ -403,12 +405,12 @@ export default function DomeGallery({
       height: tileR.height
     };
     el.style.visibility = 'hidden';
-    (el.style as any).zIndex = 0;
+    el.style.zIndex = '0';
     const overlay = document.createElement('div');
     overlay.className = 'enlarge';
     overlay.style.cssText = `position:absolute; left:${frameR.left - mainR.left}px; top:${frameR.top - mainR.top}px; width:${frameR.width}px; height:${frameR.height}px; opacity:0; z-index:30; will-change:transform,opacity; transform-origin:top left; transition:transform ${enlargeTransitionMs}ms ease, opacity ${enlargeTransitionMs}ms ease; border-radius:${openedImageBorderRadius}; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.35);`;
-    const rawSrc = parent.dataset.src || (el.querySelector('img') as HTMLImageElement)?.src || '';
-    const rawAlt = parent.dataset.alt || (el.querySelector('img') as HTMLImageElement)?.alt || '';
+    const rawSrc = parent.dataset.src ?? el.querySelector('img')!.src ?? '';
+    const rawAlt = parent.dataset.alt ?? el.querySelector('img')!.alt ?? '';
     const img = document.createElement('img');
     img.src = rawSrc;
     img.alt = rawAlt;
@@ -435,11 +437,11 @@ export default function DomeGallery({
       if (performance.now() - openStartedAtRef.current < 250) return;
       const el = focusedElRef.current;
       if (!el) return;
-      const parent = el.parentElement as HTMLElement;
+      const parent = el.parentElement!;
       const overlay = viewerRef.current?.querySelector('.enlarge') as HTMLElement | null;
       if (!overlay) return;
 
-      const refDiv = parent.querySelector('.item__image--reference') as HTMLElement | null;
+      const refDiv = parent.querySelector('.item__image--reference');
       const originalPos = originalTilePositionRef.current;
       if (!originalPos) {
         overlay.remove();
@@ -447,7 +449,7 @@ export default function DomeGallery({
         parent.style.setProperty('--rot-y-delta', `0deg`);
         parent.style.setProperty('--rot-x-delta', `0deg`);
         el.style.visibility = '';
-        (el.style as any).zIndex = 0;
+        el.style.zIndex = '0';
         focusedElRef.current = null;
         rootRef.current?.removeAttribute('data-enlarging');
         openingRef.current = false;
@@ -459,7 +461,7 @@ export default function DomeGallery({
       parent.style.setProperty('--rot-y-delta', `0deg`);
       parent.style.setProperty('--rot-x-delta', `0deg`);
       el.style.visibility = '';
-      (el.style as any).zIndex = 0;
+      el.style.zIndex = '0';
       focusedElRef.current = null;
       rootRef.current?.removeAttribute('data-enlarging');
       openingRef.current = false;
@@ -566,12 +568,12 @@ export default function DomeGallery({
         className="sphere-root relative w-full h-full"
         style={
           {
-            ['--segments-x' as any]: segments,
-            ['--segments-y' as any]: segments,
-            ['--overlay-blur-color' as any]: overlayBlurColor,
-            ['--tile-radius' as any]: imageBorderRadius,
-            ['--enlarge-radius' as any]: openedImageBorderRadius,
-            ['--image-filter' as any]: grayscale ? 'grayscale(1)' : 'none'
+            '--segments-x': segments,
+            '--segments-y': segments,
+            '--overlay-blur-color': overlayBlurColor,
+            '--tile-radius': imageBorderRadius,
+            '--enlarge-radius': openedImageBorderRadius,
+            '--image-filter': grayscale ? 'grayscale(1)' : 'none'
           } as React.CSSProperties
         }
       >
@@ -597,10 +599,10 @@ export default function DomeGallery({
                   data-size-y={it.sizeY}
                   style={
                     {
-                      ['--offset-x' as any]: it.x,
-                      ['--offset-y' as any]: it.y,
-                      ['--item-size-x' as any]: it.sizeX,
-                      ['--item-size-y' as any]: it.sizeY,
+                      '--offset-x': it.x,
+                      '--offset-y': it.y,
+                      '--item-size-x': it.sizeX,
+                      '--item-size-y': it.sizeY,
                       top: '-999px',
                       bottom: '-999px',
                       left: '-999px',

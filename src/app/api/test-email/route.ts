@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
@@ -28,27 +28,29 @@ export async function GET() {
       }),
     });
 
-    const emailResult = await emailResponse.json();
+    const emailResult = await emailResponse.json() as {
+      id?: string;
+    };
 
     if (!emailResponse.ok) {
       console.error('Resend API test error:', {
         status: emailResponse.status,
         statusText: emailResponse.statusText,
-        error: emailResult
+        error: emailResult as unknown
       });
       
       return NextResponse.json({
         success: false,
         error: 'API key test failed',
         status: emailResponse.status,
-        details: emailResult
+        details: emailResult as unknown
       }, { status: 200 });
     }
 
     return NextResponse.json({
       success: true,
       message: 'Test email sent successfully!',
-      emailId: emailResult.id
+      emailId: emailResult.id ?? ''
     }, { status: 200 });
 
   } catch (error) {

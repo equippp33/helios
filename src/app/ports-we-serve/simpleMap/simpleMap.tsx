@@ -15,6 +15,14 @@ interface MarkerType {
   coordinates: [number, number];
 }
 
+// Define type for geography object from react-simple-maps
+interface GeographyType {
+  rsmKey: string;
+  properties?: {
+    NAME_1?: string;
+  };
+}
+
 // India GeoJSON data URL
 const geoUrl = 'https://raw.githubusercontent.com/geohacker/india/master/state/india_telengana.geojson';
 
@@ -79,17 +87,17 @@ const getStateColor = (stateName: string | undefined): string => {
   
   // Create a simple hash from state name to get consistent colors
   // Handle undefined stateName by using a default value
-  const name = stateName || 'default';
+  const name = stateName ?? 'default';
   let hash = 0;
   for (let i = 0; i < name.length; i++) {
     hash = name.charCodeAt(i) + ((hash << 5) - hash);
   }
-  return colors[Math.abs(hash) % colors.length];
+  return colors[Math.abs(hash) % colors.length] ?? '#3B82F6';
 };
 export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
   const [selectedPort, setSelectedPort] = useState<string | null>(null);
-  const [markerPosition, setMarkerPosition] = useState<{ x: number; y: number } | null>(null);
-  const markerRefs = useRef<{ [key: string]: SVGCircleElement | null }>({});
+  const [, setMarkerPosition] = useState<{ x: number; y: number } | null>(null);
+  const markerRefs = useRef<Record<string, SVGImageElement | null>>({});
 
   const handlePortClick = (portName: string) => {
     console.log('Port clicked:', portName);
@@ -99,7 +107,7 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
     const markerElement = markerRefs.current[portName];
     if (markerElement) {
       // Use a more reliable container selector
-      const mapContainer = document.querySelector('.w-\\[60\\%\\]') || document.querySelector('[class*="w-[60%]"]');
+      const mapContainer = document.querySelector('.w-\\[60\\%\\]') ?? document.querySelector('[class*="w-[60%]"]');
       
       if (mapContainer) {
         const rect = markerElement.getBoundingClientRect();
@@ -119,13 +127,13 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
         }, 50);
       } else {
         // Fallback with estimated positions
-        const fallbackPositions: { [key: string]: { x: number; y: number } } = {
+        const fallbackPositions: Record<string, { x: number; y: number }> = {
           'Chennai': { x: 400, y: 350 },
           'Mumbai': { x: 200, y: 280 },
           'Kolkata': { x: 450, y: 250 }
         };
         
-        const position = fallbackPositions[portName] || { x: 300, y: 300 };
+        const position = fallbackPositions[portName] ?? { x: 300, y: 300 };
         console.log('Using fallback position:', position);
         setMarkerPosition(position);
         onPortClick?.(portName.toLowerCase(), position);
@@ -133,13 +141,13 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
     } else {
       console.log('Marker element not found for:', portName);
       // Still trigger the port click with fallback position
-      const fallbackPositions: { [key: string]: { x: number; y: number } } = {
+      const fallbackPositions: Record<string, { x: number; y: number }> = {
         'Chennai': { x: 400, y: 350 },
         'Mumbai': { x: 200, y: 280 },
         'Kolkata': { x: 450, y: 250 }
       };
       
-      const position = fallbackPositions[portName] || { x: 300, y: 300 };
+      const position = fallbackPositions[portName] ?? { x: 300, y: 300 };
       setMarkerPosition(position);
       onPortClick?.(portName.toLowerCase(), position);
     }
@@ -192,11 +200,11 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
         >
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
-              geographies.map((geo) => (
+              geographies.map((geo: GeographyType) => (
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill={getStateColor(geo.properties?.NAME_1 || 'default')}
+                  fill={getStateColor(geo.properties?.NAME_1 ?? 'default')}
                   stroke="#FFFFFF"
                   strokeWidth={0.5}
                   style={{
@@ -217,10 +225,10 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
           {markers.map(({ name, coordinates }) => (
             <Marker 
               key={name} 
-              coordinates={coordinates as [number, number]}
+              coordinates={coordinates}
             >
               <image
-                ref={(el) => { markerRefs.current[name] = el as any; }}
+                ref={(el) => { markerRefs.current[name] = el; }}
                 href={selectedPort === name ? "/shiptrans.png" : "/ship.png"}
                 x={selectedPort === name ? -21 : -12}
                 y={selectedPort === name ? -21 : -12}

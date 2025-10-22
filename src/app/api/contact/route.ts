@@ -1,11 +1,19 @@
-import { NextRequest, NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 
 // Initialize Resend without importing the full package to avoid React Email dependency
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const body = await request.json() as {
+      firstName?: string;
+      lastName?: string;
+      email?: string;
+      phoneNumber?: string;
+      subject?: string;
+      message?: string;
+    };
     const { firstName, lastName, email, phoneNumber, subject, message } = body;
 
     // Validate required fields
@@ -46,7 +54,7 @@ export async function POST(request: NextRequest) {
               <h3 style="color: #003751; margin-top: 0;">Contact Information</h3>
               <p><strong>Name:</strong> ${firstName} ${lastName}</p>
               <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Phone:</strong> ${phoneNumber || 'Not provided'}</p>
+              <p><strong>Phone:</strong> ${phoneNumber ?? 'Not provided'}</p>
             </div>
             
             <div style="background-color: #fff; padding: 20px; border: 1px solid #e9ecef; border-radius: 8px;">
@@ -69,7 +77,7 @@ export async function POST(request: NextRequest) {
           
           Name: ${firstName} ${lastName}
           Email: ${email}
-          Phone: ${phoneNumber || 'Not provided'}
+          Phone: ${phoneNumber ?? 'Not provided'}
           
           Subject: ${subject}
           
@@ -79,13 +87,16 @@ export async function POST(request: NextRequest) {
       }),
     });
 
-    const emailResult = await emailResponse.json();
+    const emailResult = await emailResponse.json() as {
+      message?: string;
+      id?: string;
+    };
 
     if (!emailResponse.ok) {
       console.error('Resend API error:', {
         status: emailResponse.status,
         statusText: emailResponse.statusText,
-        error: emailResult
+        error: emailResult as unknown
       });
       
       // Return more specific error messages
@@ -101,14 +112,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { 
           error: errorMessage,
-          details: emailResult.message || 'Unknown error'
+          details: emailResult.message ?? 'Unknown error'
         },
         { status: 500 }
       );
     }
 
     return NextResponse.json(
-      { message: 'Email sent successfully', id: emailResult.id },
+      { message: 'Email sent successfully', id: emailResult.id ?? '' },
       { status: 200 }
     );
 

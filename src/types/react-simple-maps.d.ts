@@ -1,9 +1,9 @@
 declare module 'react-simple-maps' {
-  import * as React from 'react';
-  import { Feature, Geometry, GeoJsonProperties } from 'geojson';
+  import type * as React from 'react';
+  import type { Feature, Geometry, GeoJsonProperties } from 'geojson';
 
   export interface ComposableMapProps {
-    projection?: string | (() => any);
+    projection?: string | (() => unknown);
     projectionConfig?: {
       scale?: number;
       xOffset?: number;
@@ -15,11 +15,11 @@ declare module 'react-simple-maps' {
     height?: number;
     style?: React.CSSProperties;
     className?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   export interface GeographiesProps {
-    geography: string | Record<string, any> | string[];
+    geography: string | Record<string, unknown> | string[];
     children: (props: {
       geographies: Array<Feature<Geometry, GeoJsonProperties>>;
     }) => React.ReactNode;
@@ -32,18 +32,18 @@ declare module 'react-simple-maps' {
       hover?: React.CSSProperties;
       pressed?: React.CSSProperties;
     };
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   export interface MarkerProps {
     coordinates: [number, number];
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   export interface ZoomableGroupProps {
     center?: [number, number];
     zoom?: number;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   export const ComposableMap: React.ComponentType<ComposableMapProps>;

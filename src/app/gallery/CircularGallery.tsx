@@ -5,9 +5,9 @@ import { useEffect, useRef } from 'react';
 
 type GL = Renderer['gl'];
 
-function debounce<T extends (...args: any[]) => void>(func: T, wait: number) {
+function debounce<T extends (...args: unknown[]) => void>(func: T, wait: number) {
   let timeout: number;
-  return function (this: any, ...args: Parameters<T>) {
+  return function (this: unknown, ...args: Parameters<T>) {
     window.clearTimeout(timeout);
     timeout = window.setTimeout(() => func.apply(this, args), wait);
   };
@@ -17,25 +17,29 @@ function lerp(p1: number, p2: number, t: number): number {
   return p1 + (p2 - p1) * t;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function autoBind(instance: any): void {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const proto = Object.getPrototypeOf(instance);
   Object.getOwnPropertyNames(proto).forEach(key => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     if (key !== 'constructor' && typeof instance[key] === 'function') {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
       instance[key] = instance[key].bind(instance);
     }
   });
 }
 
 function getFontSize(font: string): number {
-  const match = font.match(/(\d+)px/);
-  return match ? parseInt(match[1] || '30', 10) : 30;
+  const match = /(\d+)px/.exec(font);
+  return match ? parseInt(match[1] ?? '30', 10) : 30;
 }
 
 function createTextTexture(
   gl: GL,
   text: string,
-  font: string = 'bold 30px monospace',
-  color: string = 'black'
+  font = 'bold 30px monospace',
+  color = 'black'
 ): { texture: Texture; width: number; height: number } {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
@@ -157,7 +161,7 @@ interface MediaProps {
 }
 
 class Media {
-  extra: number = 0;
+  extra = 0;
   geometry: Plane;
   gl: GL;
   image: string;
@@ -180,9 +184,9 @@ class Media {
   width!: number;
   widthTotal!: number;
   x!: number;
-  speed: number = 0;
-  isBefore: boolean = false;
-  isAfter: boolean = false;
+  speed = 0;
+  isBefore = false;
+  isAfter = false;
 
   constructor({
     geometry,
@@ -290,6 +294,7 @@ class Media {
     img.src = this.image;
     img.onload = () => {
       texture.image = img;
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
     };
   }
@@ -338,7 +343,9 @@ class Media {
     }
 
     this.speed = scroll.current - scroll.last;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     this.program.uniforms.uTime.value += 0.04;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     this.program.uniforms.uSpeed.value = this.speed;
 
     const planeOffset = this.plane.scale.x / 2;
@@ -360,12 +367,14 @@ class Media {
     if (viewport) {
       this.viewport = viewport;
       if (this.plane.program.uniforms.uViewportSizes) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         this.plane.program.uniforms.uViewportSizes.value = [this.viewport.width, this.viewport.height];
       }
     }
     this.scale = this.screen.height / 1500;
     this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
     this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
     this.padding = 2;
     this.width = this.plane.scale.x + this.padding;
@@ -394,7 +403,7 @@ class App {
     last: number;
     position?: number;
   };
-  onCheckDebounce: (...args: any[]) => void;
+  onCheckDebounce: (...args: unknown[]) => void;
   renderer!: Renderer;
   gl!: GL;
   camera!: Camera;
@@ -404,7 +413,7 @@ class App {
   mediasImages: { image: string; text: string }[] = [];
   screen!: { width: number; height: number };
   viewport!: { width: number; height: number };
-  raf: number = 0;
+  raf = 0;
 
   boundOnResize!: () => void;
   boundOnWheel!: (e: Event) => void;
@@ -412,8 +421,8 @@ class App {
   boundOnTouchMove!: (e: MouseEvent | TouchEvent) => void;
   boundOnTouchUp!: () => void;
 
-  isDown: boolean = false;
-  start: number = 0;
+  isDown = false;
+  start = 0;
 
   constructor(
     container: HTMLElement,
@@ -472,7 +481,7 @@ class App {
 
   createMedias(
     items: { image: string; text: string }[] | undefined,
-    bend: number = 1,
+    bend = 1,
     textColor: string,
     borderRadius: number,
     font: string
@@ -523,7 +532,7 @@ class App {
         text: ''
       }
     ];
-    const galleryItems = items && items.length ? items : defaultItems;
+    const galleryItems = items?.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
     this.medias = this.mediasImages.map((data, index) => {
       return new Media({
@@ -548,12 +557,12 @@ class App {
   onTouchDown(e: MouseEvent | TouchEvent) {
     this.isDown = true;
     this.scroll.position = this.scroll.current;
-    this.start = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    this.start = 'touches' in e ? (e.touches[0]?.clientX ?? 0) : e.clientX;
   }
 
   onTouchMove(e: MouseEvent | TouchEvent) {
     if (!this.isDown) return;
-    const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const x = 'touches' in e ? (e.touches[0]?.clientX ?? 0) : e.clientX;
     const distance = (this.start - x) * (this.scrollSpeed * 0.025);
     this.scroll.target = (this.scroll.position ?? 0) + distance;
   }
@@ -565,13 +574,13 @@ class App {
 
   onWheel(e: Event) {
     const wheelEvent = e as WheelEvent;
-    const delta = wheelEvent.deltaY || (wheelEvent as any).wheelDelta || (wheelEvent as any).detail;
+    const delta = wheelEvent.deltaY ?? (wheelEvent as WheelEvent & { wheelDelta?: number }).wheelDelta ?? (wheelEvent as WheelEvent & { detail?: number }).detail;
     this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
     this.onCheckDebounce();
   }
 
   onCheck() {
-    if (!this.medias || !this.medias[0]) return;
+    if (!this.medias?.[0]) return;
     const width = this.medias[0].width;
     const itemIndex = Math.round(Math.abs(this.scroll.target) / width);
     const item = width * itemIndex;
