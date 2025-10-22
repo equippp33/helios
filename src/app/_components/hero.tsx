@@ -26,7 +26,7 @@ const Hero = () => {
       subtitle:
         "Providing comprehensive marine supplies and ship repair services across all major Indian ports. Committed to quality, reliability, and seamless operations.",
       button: "Get Started",
-      video: "/video1.webm",
+      video: "/video3.webm",
     },
   };
   return (
@@ -74,7 +74,7 @@ const Hero = () => {
               loop
               playsInline
             >
-              <source src="/video1.webm" type="video/webm" />
+              <source src="/video3.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>

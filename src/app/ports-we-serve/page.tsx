@@ -5,8 +5,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Contact from '../_components/contact';
 import Navbar from '../_components/navbar';
-import Hero from '../_components/hero';
+import sec1 from '../gallery/sec1';
 import Footer from '../_components/footer';
+import Sec1 from '../gallery/sec1';
 
 interface PortData {
   id: string;
@@ -126,7 +127,7 @@ const PortsWeServe = () => {
       
       <section className="flex items-center justify-center h-screen bg-cover bg-center "
                style={{ backgroundImage: "url('/ship.svg')" }}>
-        <Hero/>
+        <Sec1/>
       </section>
 
       {/* Map Section - Repositioned */}
