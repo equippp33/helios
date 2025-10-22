@@ -14,6 +14,8 @@ import Sec6 from "./_components/sec6";
 import Sec7 from "./_components/sec7";
 import Sec8 from "./_components/sec8";
 import Companies from "./_components/sec9";
+import CircularSec from "./gallery/CircularSec";
+import Contact from "./_components/contact";
 
 
 
@@ -35,12 +37,13 @@ export default async function Home() {
        <section><Sec3/></section>
        <section><Sec4/></section>
        <section><Sec5/></section>
+       <section><CircularSec/></section>
        <section><Sec6/></section>
        <section><Sec7/></section>
        <section><Sec8/></section>
        <section className="flex w-full justify-center items-center p-4"><Companies/></section>
        
-       
+       <section><Contact/></section>
        <section><Footer/></section>
       </main>
     </HydrateClient>

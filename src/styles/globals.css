@@ -15,9 +15,22 @@
     }
   }
   
+  /* Keyframes for infinite scroll animation */
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+  
 }
 .animate-slideXToFro {
     animation: slideXToFro 10s linear infinite; }
+
+.animate-infiniteScroll {
+    animation: infiniteScroll 40s linear infinite; }
 
 @plugin "tailwindcss-animate";
 
@@ -143,5 +156,15 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
   }
 }

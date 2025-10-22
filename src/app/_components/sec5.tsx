@@ -43,23 +43,26 @@ const offerings = [
 
 const OfferingRow = ({ id, title, description, image }: Offering) => {
   return (
-    <div className="group flex justify-between  items-start border-t border-gray-300 py-6 relative">
-      <div className="flex items-start gap-4 md:gap-14">
-        <span className="text-4xl md:text-6xl text-yellow-400 font-semibold w-16">{id}/</span>
-        <div className='flex flex-col gap-2'>
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="text-sm md:text-base text-gray-600">{description}</p>
-        </div>
+    <div className="group flex items-center bg-gray-50 rounded-lg p-6 mb-4 relative">
+      {/* Large Yellow Number */}
+      <div className="flex-shrink-0">
+        <span className="text-6xl md:text-8xl text-yellow-400 font-semibold">{id}/</span>
+      </div>
+
+      {/* Content Section */}
+      <div className="flex-1 px-10">
+        <h3 className="text-2xl md:text-2xl font-bold text-black mb-2 tracking-tight">{title}</h3>
+        <p className="text-base md:text-md text-gray-600 tracking-tight">{description}</p>
       </div>
 
       {/* Hover Image - shown only on hover */}
-      <div className="hidden group-hover:block absolute right-0 top-1/2 -translate-y-1/2">
+      <div className="hidden group-hover:block absolute right-6 top-1/2 -translate-y-1/2 z-10">
         <Image
-          width={40}
-          height={20}
+          width={200}
+          height={100}
           src={image}
-          alt="Preview"
-          className="w-40 h-20 object-cover rounded shadow-lg transition-opacity duration-300"
+          alt={title}
+          className="w-48 h-24 md:w-56 md:h-28 object-cover rounded-lg shadow-lg transition-opacity duration-300"
         />
       </div>
     </div>
@@ -72,7 +75,7 @@ const Sec5 = () => {
       <div className="flex flex-col mt-6 md:flex-row justify-between items-center h-fit mb-8">
         <div className='flex flex-col gap-4'>
            <h2 className="text-xl md:text-3xl font-bold">
-              <span className="text-black">Explore Our Offerings</span>
+              <span className="text-black tracking-tight">Explore Our Offerings</span>
            </h2>
            <p className="text-sm md:text-md text-black">
              Complete Marine & Industrial Solutions, Delivered Nationwide

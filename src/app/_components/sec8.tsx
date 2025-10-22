@@ -14,11 +14,11 @@ interface ServiceCardProps {
 // A reusable component for the service card
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, bgColor, titleColor, descriptionColor }) => {
   return (
-    <div className={`${bgColor} p-6 rounded-lg flex flex-col  shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1`}>
+    <div className={`${bgColor} p-8 rounded-3xl flex flex-col transition duration-300 transform hover:-translate-y-1`}>
       <div className="mb-5 md:mb-30">
         {icon}
       </div>
-      <h2 className={`text-2xl font-semibold mb-3 ${titleColor}`}>{title}</h2>
+      <h2 className={`text-2xl font-semibold tracking-tight mb-3 ${titleColor}`}>{title}</h2>
       <p className={`mb-5 ${descriptionColor}`}>{description}</p>
     </div>
   );
@@ -43,13 +43,13 @@ const Sec8: React.FC = () => {
 
   return (
     <div className="lg:min-h-screen flex justify-center h-fit  py-16 px-4 sm:px-6 lg:px-8">
-      <div className="w-[90%] ">
+      <div className="w-[88%] ">
         {/* Header Section */}
         <div className=" mb-12">
-          <h3 className="text-[#316CE6] text-[20px] font-semibold tracking-wide uppercase mb-2">
+          <h3 className="text-[#316CE6] text-md font-semibold tracking-tight mb-2">
             Dependable Marine & Industrial Supplies
           </h3>
-          <h1 className="text-[35px] font-semibold text-blac leading-tight">
+          <h1 className="text-4xl font-semibold text-black leading-tight tracking-tight">
             All-in-One Services | Swift and Reliable Solutions
           </h1>
         </div>
@@ -61,26 +61,26 @@ const Sec8: React.FC = () => {
             title="Marine Provisions"
             description="Top-quality fresh, frozen, and dry provisions, along with bonded goods and technical stores, tailored for every vessel."
             bgColor="bg-[#EDCBCC]"
-            titleColor="text-black"
-            descriptionColor="text-black"
+            titleColor="text-[#B03C41]"
+            descriptionColor="text-[#B03C41]"
           />
 
           <ServiceCard
             icon={InspectionIcon}
             title="Inspection & Certification"
             description="Thorough inspections and certifications for life-saving and navigation equipment, fully compliant with international standards."
-            bgColor="bg-[#07A2BB]"
-            titleColor="text-black"
-            descriptionColor="text-black"
+            bgColor="bg-[#8CECFA]"
+            titleColor="text-[#04515E]"
+            descriptionColor="text-[#04515E]"
           />
 
           <ServiceCard
             icon={SupportIcon}
             title="24/7 Support"
             description="Our team is available around the clock, including holidays, to ensure seamless service and swift delivery at every port."
-            bgColor="bg-[#E7D472]"
-            titleColor="text-black"
-            descriptionColor="text-black"
+            bgColor="bg-[#F1E75E]"
+            titleColor="text-[#6E670A]"
+            descriptionColor="text-[#6E670A]"
           />
         </div>
       </div>

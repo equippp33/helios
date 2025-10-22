@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 const images = [
@@ -102,46 +102,12 @@ const textBlocks = [
 ];
 
 const Section2 = () => {
-  const [index, setIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const scrollDeltaRef = useRef(0);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    const handleWheel = (e: WheelEvent) => {
-      e.preventDefault();
-      scrollDeltaRef.current += e.deltaY;
-
-      const threshold = 150; // Adjust scroll sensitivity
-      if (Math.abs(scrollDeltaRef.current) > threshold) {
-        const direction = scrollDeltaRef.current > 0 ? 1 : -1;
-        setIsFading(true);
-        setTimeout(() => {
-          setIndex((prev) => {
-            const next = (prev + direction + images.length) % images.length;
-            return next;
-          });
-          setIsFading(false);
-        }, 200);
-        scrollDeltaRef.current = 0;
-      }
-    };
-
-    el.addEventListener('wheel', handleWheel, { passive: false });
-    return () => el.removeEventListener('wheel', handleWheel);
-  }, []);
-
-  const currentBlock = textBlocks[index]!;
-
   return (
     <div className="flex flex-col w-[85%] h-fit mx-auto my-20">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-10">
         {/* Left: Static Header Section */}
         <div className="flex w-full max-w-[600px] flex-col gap-6">
-          <h1 className="text-[35px] font-semibold">
+          <h1 className="text-4xl font-semibold tracking-tight">
             Reliable, Cost-Efficient Solutions for All Maritime Needs
           </h1>
           <button className="flex items-center justify-center bg-blue-500 px-4 py-2 rounded-full w-full max-w-[160px] text-white text-[16px]">
@@ -149,29 +115,29 @@ const Section2 = () => {
           </button>
         </div>
 
-        {/* Right: Scroll-Triggered Image + Text */}
-        <div
-          ref={scrollRef}
-          className={`flex flex-col items-center justify-center gap-6 rounded-3xl p-4 w-full md:w-[800px] h-fit overflow-hidden transition-opacity duration-500 ${
-            isFading ? 'opacity-0' : 'opacity-100'
-          }`}
-        >
-          <Image
-            key={`img-${index}`}
-            src={images[index]!}
-            alt={`image-${index}`}
-            width={300}
-            height={350}
-            className="rounded-3xl object-cover w-full h-[250px] md:h-full"
-          />
-          <div key={currentBlock.key} className="flex flex-col justify-center items-start w-full h-full text-start px-2 gap-2">
-            <h1 className="text-start text-[25px] font-semibold">{currentBlock.title}</h1>
-            <p className="text-start text-[18px] px-2">{currentBlock.description}</p>
-            <ul className="text-start px-3 list-disc ml-5">
-              {currentBlock.list.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+        {/* Right: Scrollable Text Blocks */}
+        <div className="w-full md:w-[800px] h-[450px] overflow-y-scroll scrollbar-hide">
+          <div className="space-y-8 pr-4">
+            {textBlocks.map((block, index) => (
+              <div key={block.key} className="flex flex-col gap-6 p-6 bg-gray-50 rounded-3xl">
+                <Image
+                  src={images[index]!}
+                  alt={block.title}
+                  width={300}
+                  height={250}
+                  className="rounded-3xl object-cover w-full h-[250px]"
+                />
+                <div className="flex flex-col gap-4">
+                  <h2 className="text-2xl font-semibold tracking-tight">{block.title}</h2>
+                  <p className="text-[18px] text-gray-700">{block.description}</p>
+                  <ul className="list-disc ml-5 space-y-1">
+                    {block.list.map((item, i) => (
+                      <li key={i} className="text-gray-600">{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

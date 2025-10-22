@@ -1,29 +1,31 @@
 import React from 'react'
-import Image from 'next/image'
+import DomeGallery from './DomeGallery'
 
 const ImageSection = () => {
+  const galleryItems = [
+    { src: '/g1.svg', alt: 'Gallery Image 1' },
+    { src: '/g2.svg', alt: 'Gallery Image 2' },
+    { src: '/g3.svg', alt: 'Gallery Image 3' },
+    { src: '/g4.svg', alt: 'Gallery Image 4' },
+    { src: '/g5.svg', alt: 'Gallery Image 5' },
+    { src: '/g6.svg', alt: 'Gallery Image 6' },
+    { src: '/g7.svg', alt: 'Gallery Image 7' },
+    { src: '/g8.svg', alt: 'Gallery Image 8' },
+    { src: '/g9.svg', alt: 'Gallery Image 9' },
+    { src: '/g10.svg', alt: 'Gallery Image 10' },
+    { src: '/g11.svg', alt: 'Gallery Image 11' }
+  ];
+
   return (
-    <div className='flex flex-col w-full mx-auto px-2 py-2 my-6 gap-2'>
-        <div className='flex flex-row flex-wrap justify-center items-center mt-8 lg:flex-row gap-2'>
-            <Image src="/g1.svg" alt="gallery1" width={800} height={400} className='w-full h-[150px] md:h-[500px] object-cover lg:max-w-[800px] ' />
-            <Image src="/g2.svg" alt="gallery1" width={600} height={400} className='w-full h-[150px] md:h-[500px] object-cover lg:max-w-[300px] ' />
-            <Image src="/g3.svg" alt="gallery1" width={600} height={400} className='w-full h-[150px] md:h-[500px] object-cover lg:max-w-[300px] ' /> 
-        </div>
-
-        <div className='flex flex-row flex-wrap w-full justify-center items-center  lg:flex-row gap-2'>
-            <Image src="/g4.svg" alt="gallery1" width={400} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[400px] ' />
-            <Image src="/g5.svg" alt="gallery1" width={200} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[200px] ' />
-            <Image src="/g6.svg" alt="gallery1" width={200} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[200px] ' /> 
-             <Image src="/g7.svg" alt="gallery1" width={600} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[600px] ' />
-        </div>
-
-        <div className='flex flex-row flex-wrap w-full justify-center items-center mb-8 lg:flex-row gap-2'>
-            <Image src="/g8.svg" alt="gallery1" width={500} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[400px] ' />
-            <Image src="/g9.svg" alt="gallery1" width={300} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[300px] ' />
-            <Image src="/g10.svg" alt="gallery1" width={500} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[400px] ' /> 
-             <Image src="/g11.svg" alt="gallery1" width={300} height={300} className='w-full h-[150px] md:h-[300px] object-cover lg:max-w-[300px] ' />
-        </div>
-
+    <div className='w-full h-screen'>
+      <DomeGallery 
+        images={galleryItems}
+        fit={1.1}
+        segments={35}
+        grayscale={false}
+        imageBorderRadius="30px"
+        openedImageBorderRadius="30px"
+      />
     </div>
   )
 }

@@ -10,6 +10,7 @@ import Footer from "../_components/footer";
 import Ourmission from "./ourmission";
 import Sec7 from "../_components/sec7";
 import Companies from "../_components/sec9";
+import Contact from "../_components/contact";
 
 
 
@@ -31,6 +32,7 @@ export default async function Home() {
        <section><Ourmission/></section>
        <section><Sec7/></section>
        <section className="flex w-full justify-center mt-15 mb-10 items-center p-4"><Companies/></section>
+       <section><Contact/></section>
        <section><Footer/></section>
       </main>
     </HydrateClient>

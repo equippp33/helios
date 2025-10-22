@@ -32,18 +32,18 @@ const Navbar = () => {
 
   return (
     <nav className={`px-6 fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
-        <div className='w-full max-w-[1400px] flex flex-row justify-between bg-transparent items-center'>
-          <Image src="/logo.svg" alt="logo" width={150} height={150} className='object-contain'/>
+        <div className='w-full max-w-full flex flex-row justify-between bg-transparent items-center'>
+          <Image src="/logo.svg" alt="logo" width={100} height={100} className='object-contain'/>
           <div className='hidden md:flex flex-row gap-4'>
               <div className={`flex flex-row gap-6 px-6 py-4 mx-4 rounded-full transition-all duration-300 ${
                 isScrolled 
                   ? 'text-black' 
                   : 'text-white bg-white/10 backdrop-blur-sm'
               }`}>
-                  <a href="" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Home</a>
-                  <a href="" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>About Us</a>
-                  <a href="" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Services</a>
-                  <a href="" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Infrastructure</a>
+                  <a href="/" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Home</a>
+                  <a href="/aboutus" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>About Us</a>
+                  <a href="/servicespage" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Services</a>
+                  <a href="/gallery" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Gallery</a>
                   <a href="/ports-we-serve/" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Ports We Serve</a>
               </div>
               <button 

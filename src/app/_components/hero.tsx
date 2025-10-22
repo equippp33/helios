@@ -6,39 +6,93 @@ type ContentKey = 1 | 2 | 3;
 const Hero = () => {
   const [active, setActive] = useState<ContentKey>(1);
 
-  const content: Record<ContentKey, { title: string; subtitle: string; button: string }> = {
+  const content: Record<ContentKey, { title: string; subtitle: string; button: string; video: string }> = {
     1: {
-      title: "India’s Fastest Certified Marine Supplier",
+      title: "India's Fastest Certified Marine Supplier",
       subtitle:
         "Supplying provisions, technical stores, and safety equipment across all major Indian ports — 24/7, certified, and guaranteed.",
       button: "Request a Quote Now",
+      video: "/video1.webm",
     },
     2: {
       title: "Partner with Us Today",
       subtitle:
         " Experience efficient, reliable marine services across all Indian ports, supporting seamless operations and fueling global trade.",
       button: "Partner Now",
+      video: "/video2.webm",
     },
     3: {
       title: "Your Marine Logistics Partner ",
       subtitle:
         "Providing comprehensive marine supplies and ship repair services across all major Indian ports. Committed to quality, reliability, and seamless operations.",
       button: "Get Started",
+      video: "/video1.webm",
     },
   };
   return (
-    <div className='w-full px-8 mt-30 sm:mt-20'>
-      
+    <div className='relative w-full h-screen px-8 overflow-hidden'>
+      {/* Background Video Carousel */}
+      <div className="absolute inset-0 z-0">
+        <div 
+          className="flex w-[300%] h-full transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${(active - 1) * 33.333}%)` }}
+        >
+          {/* Video 1 */}
+          <div className="w-1/3 h-full flex-shrink-0">
+            <video
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/video1.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          {/* Video 2 */}
+          <div className="w-1/3 h-full flex-shrink-0">
+            <video
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/video2.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          {/* Video 3 */}
+          <div className="w-1/3 h-full flex-shrink-0">
+            <video
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/video1.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        
+        {/* Video overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
       
       {/* Content */}
-      <div className="relative z-10 max-[1400px] px-8">
-        <h1 className="text-5xl text-white font-bold mb-6 leading-tight">
+      <div className="relative z-10 h-full flex flex-col justify-center max-w-[1400px] px-8">
+        <h1 className="text-5xl text-white font-semibold mb-6 leading-tight tracking-tight">
           {content[active].title}
         </h1>
 
         <p className="text-lg font-grotesk text-white mb-8 max-w-2xl">{content[active].subtitle}</p>
 
-        <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition">
+        <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition w-fit">
           {content[active].button}
         </button>
 

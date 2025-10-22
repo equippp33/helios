@@ -25,7 +25,7 @@ const Sec6 = () => {
 
   return (
     <div className='w-full bg-white flex flex-col gap-6 p-6 md:px-16 md:gap-8'>
-        <h1 className='text-2xl md:text-3xl w-full font-semibold mt-4 '>Reliable Ship Chandlers & Maritime Specialists</h1>
+        <h1 className='text-2xl md:text-3xl w-full font-bold tracking-tight mt-4 '>Reliable Ship Chandlers & Maritime Specialists</h1>
         <div className='flex flex-col lg:flex-row items-center justify-between w-full border-t-2 mt-4 mb-6 border-gray-400 gap-4'>
             <div className='flex flex-col gap-6 mt-8'>
                 <h2 className='text-[#316CE6] text-xl font-semibold'>Redefining Marine Supply and Support</h2>
@@ -33,10 +33,10 @@ const Sec6 = () => {
 
             </div>
 
-            <div className='flex flex-col w-full max-w-[50%] mt-8 gap-12 '>
-                <p className='text-gray-600 text-lg md:text-2xl'>At Helios Shipping and Trading, we provide marine and industrial supplies, including provisions, technical stores, and round-the-clock support at all major Indian ports.</p>
+            <div className='flex flex-col w-full max-w-[50%] mt-20 gap-12 '>
+                <p className='text-gray-600 text-lg md:text-lg'>At Helios Shipping and Trading, we provide marine and industrial supplies, including provisions, technical stores, and round-the-clock support at all major Indian ports.</p>
                 <div className='flex flex-col gap-8'>
-                    <div className='flex flex-row gap-2'>
+                    <div className='flex flex-row gap-4'>
                         <Image src='/shipicon.svg' alt='shipicon' width={60} height={60} className='bg-[#316CE6] rounded-2xl'/>
                         <div className='flex flex-col gap-1'>
                             <h3 className='font-semibold text-lg'>Comprehensive Services</h3>
@@ -45,7 +45,7 @@ const Sec6 = () => {
                         </div>
 
                     </div>
-                    <div className='flex flex-row gap-2'>
+                    <div className='flex flex-row gap-4'>
                         <Image src='/shipicon2.svg' alt='shipicon' width={60} height={60} className='bg-[#316CE6] rounded-2xl'/>
                         <div className='flex flex-col gap-1'>
                             <h3 className='font-semibold text-lg'>Nationwide Coverage</h3>

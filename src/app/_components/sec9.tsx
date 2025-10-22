@@ -1,58 +1,58 @@
 import Image from 'next/image';
 import React from 'react'
-import LogoLoop from './logoloop';
 
-
-const Impa = () => (
-  <Image
-    src="/impa.svg"
-    alt="impa"
-    width={140}
-    height={140}
-    className="w-[100px] h-[100px]"
-  />
-);
-const Iso = () => (
-  <Image
-    src="/iso.svg"
-    alt="impa"
-    width={140}
-    height={140}
-    className="w-[100px] h-[100px]"
-  />
-);
-const Shipserve = () => (
-  <Image
-    src="/shipserve.svg"
-    alt="impa"
-    width={140}
-    height={140}
-    className="w-[100px] h-[100px]"
-  />
-);
-
-
-
-const techLogos = [
-  { node: <Impa />, title: "Ima"  },
-  { node: <Iso />, title: "Iso"  },
-  { node: <Shipserve />, title: "Shipserve"  },
-  { node: <Iso />, title: "Iso" },]
+const logos = [
+  { src: "/impa.svg", alt: "IMPA" },
+  { src: "/iso_.svg", alt: "ISO" },
+  { src: "/shipserve.svg", alt: "Shipserve" },
+  { src: "/iso.svg", alt: "ISO" },
+  { src: "/fssai.svg", alt: "FSSAI" },
+];
 
 const Companies = () => {
   return (
-    <div className='flex w-[90%] px-2  h-fit md:h-[180px] justify-center items-center rounded-2xl bg-white m-4'><LogoLoop
-           logos={techLogos}
-           speed={120}
-           direction="left"
-           logoHeight={140}
-           gap={40}
-           pauseOnHover
-           scaleOnHover
-           fadeOut
-           fadeOutColor="#ffffff"
-           ariaLabel="Technology partners"
-         /></div>
+    <div className='flex w-[86.5%] px-2 h-fit md:h-[180px] justify-center items-center rounded-2xl bg-white m-4 overflow-hidden'>
+      <div className="w-full overflow-hidden">
+        <div className="flex animate-infiniteScroll items-center gap-28 w-max">
+          {/* First set of logos */}
+          {logos.map((logo, index) => (
+            <div key={`first-${index}`} className="flex-shrink-0">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={100}
+                height={100}
+                className="w-[100px] h-[100px] object-contain"
+              />
+            </div>
+          ))}
+          {/* Duplicate set for seamless loop */}
+          {logos.map((logo, index) => (
+            <div key={`second-${index}`} className="flex-shrink-0">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={100}
+                height={100}
+                className="w-[100px] h-[100px] object-contain"
+              />
+            </div>
+          ))}
+          {/* Third set for extra smoothness */}
+          {logos.map((logo, index) => (
+            <div key={`third-${index}`} className="flex-shrink-0">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={100}
+                height={100}
+                className="w-[100px] h-[100px] object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 
