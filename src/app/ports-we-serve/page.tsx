@@ -197,7 +197,7 @@ const PortsWeServe = () => {
       </div>
       
       {/* Contact Section */}
-      <div className="mt-80">
+      <div className="lg:mt-80">
         
         <Contact />
       </div>

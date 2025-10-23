@@ -154,7 +154,7 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
   };
 
   return (
-    <div className="w-full h-[100vh] bg-transparent rounded-lg overflow-visible relative">
+    <div className="w-full h-fit bg-transparent rounded-lg overflow-visible relative">
       <style jsx global>{`
         @keyframes drawLine {
           from {

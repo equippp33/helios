@@ -24,7 +24,7 @@ export default async function Home() {
     <HydrateClient>
       <main className="bg-[#EFFAFF]">
        <Navbar/>
-       <section className="flex items-center justify-center min-h-screen bg-cover bg-center "
+       <section className="flex items-center w-full justify-center min-h-screen bg-cover bg-center "
                 style={{ backgroundImage: "url('/ship.svg')" }}>
                 <Sec1/>
        </section>

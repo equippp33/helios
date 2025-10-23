@@ -33,7 +33,7 @@ const Sec6 = () => {
 
             </div>
 
-            <div className='flex flex-col w-full max-w-[50%] mt-20 gap-12 '>
+            <div className='flex flex-col w-full md:max-w-[50%] mt-20 gap-12 '>
                 <p className='text-gray-600 text-lg md:text-lg'>At Helios Shipping and Trading, we provide marine and industrial supplies, including provisions, technical stores, and round-the-clock support at all major Indian ports.</p>
                 <div className='flex flex-col gap-8'>
                     <div className='flex flex-row gap-4'>

@@ -197,7 +197,7 @@ return (
     <div className="relative flex flex-col md:flex-row items-center justify-center w-full h-full z-10">
       
       {/* Left Image Section */}
-      <div className="flex-1 h-[60vh] md:h-[70vh] w-full max-w-[800px] p-2 flex items-center justify-center relative">
+      <div className="flex-1 h-[60vh] mt-20 sm:mt-0 md:h-[70vh] w-full max-w-[800px] p-2 flex items-center justify-center relative">
         <div className="relative w-[80%] h-[80%] z-20 transition-opacity duration-700">
           <Image
             src={currentSlide.image}

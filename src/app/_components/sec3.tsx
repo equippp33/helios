@@ -31,7 +31,7 @@ const Sec3 = (): React.JSX.Element => {
       
       {/* World Map Section */}
       <div
-        className='flex relative h-fit md:h-screen md:px-4 bg-no-repeat bg-[length:90%_auto] bg-[position:center_top] w-[90%] overflow-hidden'
+        className='flex relative h-fit md:h-screen md:px-4 bg-no-repeat bg-[length:90%_auto] bg-[position:center_top] w-[90%] '
         style={{ backgroundImage: "url('/worldmap.svg')", backgroundSize: 'contain' }}
       >
         <div className="relative w-full h-[200px] md:h-fit">

@@ -43,26 +43,26 @@ const offerings = [
 
 const OfferingRow = ({ id, title, description, image }: Offering) => {
   return (
-    <div className="group flex items-center bg-gray-50 rounded-lg p-6 mb-4 relative">
+    <div className="group flex flex-col md:flex-row items-center  gap-2 bg-gray-50 rounded-lg p-2 lg:p-6 mb-4 relative">
       {/* Large Yellow Number */}
       <div className="flex-shrink-0">
-        <span className="text-6xl md:text-8xl text-yellow-400 font-semibold">{id}/</span>
+        <span className="text-4xl md:text-8xl text-yellow-400 font-semibold">{id}/</span>
       </div>
 
       {/* Content Section */}
       <div className="flex-1 px-10">
-        <h3 className="text-2xl md:text-2xl font-bold text-black mb-2 tracking-tight">{title}</h3>
-        <p className="text-base md:text-md text-gray-600 tracking-tight">{description}</p>
+        <h3 className="text-lg md:text-2xl font-bold text-black mb-2 tracking-tight">{title}</h3>
+        <p className="text-xs md:text-base text-gray-600 tracking-tight">{description}</p>
       </div>
 
       {/* Hover Image - shown only on hover */}
-      <div className="hidden group-hover:block absolute right-6 top-1/2 -translate-y-1/2 z-10">
+      <div className="block sm:hidden sm:group-hover:block h-fit ">
         <Image
           width={200}
-          height={100}
+          height={90}
           src={image}
           alt={title}
-          className="w-48 h-24 md:w-56 md:h-28 object-cover rounded-lg shadow-lg transition-opacity duration-300"
+          className="w-48 h-22 md:w-56 md:h-24 object-cover rounded-lg shadow-lg transition-opacity duration-300"
         />
       </div>
     </div>

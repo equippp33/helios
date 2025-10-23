@@ -86,29 +86,29 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center max-w-[1400px] px-8">
-        <h1 className="text-5xl text-white font-semibold mb-6 leading-tight tracking-tight">
+        <h1 className="md:text-5xl text-xl text-white font-semibold mb-6 leading-tight tracking-tight">
           {content[active].title}
         </h1>
 
-        <p className="text-lg font-grotesk text-white mb-8 max-w-2xl">{content[active].subtitle}</p>
+        <p className="md:text-lg text-sm font-grotesk text-white mb-8 max-w-2xl">{content[active].subtitle}</p>
 
         <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition w-fit">
           {content[active].button}
         </button>
 
         {/* Boxes */}
-        <div className="flex flex-col sm:flex-row w-full mb-4 gap-6 mt-12">
+        <div className="flex flex-col sm:flex-row w-full mb-4 gap-4 lg:gap-6 mt-4 md:mt-12">
           {[1, 2, 3].map((num) => (
             <button
               key={num}
              onClick={() => setActive(num as ContentKey)}
-              className={`flex sm:flex-col flex-row justify-center items-center border-2 px-8 py-6 gap-2 sm:w-45 text-center transition ${
+              className={`flex sm:flex-col flex-row justify-center items-center border-2 md:px-8 md:py-6 py-4 px-2 gap-2 sm:w-45 text-center transition ${
                 active === num
                   ? "bg-white/10 backdrop-blur-md text-white border-white"
                   : "border-white text-white hover:bg-transparent hover:backdrop-blur-sm"
               }`}
             >
-              <span className="text-xl font-bold mb-2">
+              <span className="md:text-xl text-sm font-bold ">
                 {num.toString().padStart(2, "0")}
               </span>
               {num === 1 && <p className=''>Get Ship Supplies now</p>}

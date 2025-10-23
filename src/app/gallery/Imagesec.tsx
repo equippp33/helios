@@ -17,7 +17,7 @@ const ImageSection = () => {
   ];
 
   return (
-    <div className='w-full h-screen'>
+    <div className='w-full h-[88vh] '>
       <DomeGallery 
         images={galleryItems}
         fit={1.1}

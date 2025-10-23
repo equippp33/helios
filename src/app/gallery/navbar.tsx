@@ -54,8 +54,8 @@ const Navbar = () => {
    }, [isDropdownOpen]);
 
   return (
-    <nav className={`px-6 fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
-        <div className='w-full max-w-full flex flex-row justify-between bg-transparent items-center'>
+    <nav className={`px-6 fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-[#EFFAFF]' : 'bg-[#EFFAFF]'}`}>
+        <div className='w-full max-w-full flex flex-row justify-between bg-[#EFFAFF] items-center'>
           <Image src="/logo.svg" alt="logo" width={100} height={100} className='object-contain'/>
           <div className='hidden md:flex flex-row gap-4'>
               <div className={`flex flex-row gap-6 px-6 py-4 mx-4 rounded-full transition-all duration-300 ${
@@ -63,14 +63,14 @@ const Navbar = () => {
                   ? 'text-black' 
                   : 'text-white bg-white/10 backdrop-blur-sm'
               }`}>
-                  <Link href="/" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Home</Link>
-                  <Link href="/aboutus" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>About Us</Link>
-                  <Link href="/services" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Services</Link>
-                  <Link href="/gallery" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Gallery</Link>
+                  <Link href="/" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-black hover:text-[#FFFF00]'}`}>Home</Link>
+                  <Link href="/aboutus" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-black hover:text-[#FFFF00]'}`}>About Us</Link>
+                  <Link href="/services" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-black hover:text-[#FFFF00]'}`}>Services</Link>
+                  <Link href="/gallery" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-black hover:text-[#FFFF00]'}`}>Gallery</Link>
                   <div className="relative dropdown-container">
                     <button 
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className={`font-semibold text-sm transition-colors flex items-center gap-1 ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}
+                      className={`font-semibold text-sm transition-colors flex items-center gap-1 ${isScrolled ? 'text-black hover:text-blue-600' : 'text-black hover:text-[#FFFF00]'}`}
                     >
                       Ports We Serve
                       <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -111,13 +111,13 @@ const Navbar = () => {
                        </div>
                         {/* Mobile Menu */}
                        {isMenuOpen && (
-                         <div className='absolute top-[70px] right-0 bg-white/20  backdrop-blur-sm w-full flex flex-col items-center gap-4 py-4 z-40 md:hidden'>
-                           <Link href="/" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Home</Link>
-                           <Link href="/aboutus" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>About Us</Link>
-                           <Link href="/services" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Services</Link>
-                           <Link href="/gallery" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Gallery</Link>
-                           <Link href="/ports-we-serve" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Ports We Serve</Link>
-                           <Link href="/supply" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>What We Supply</Link>
+                         <div className='absolute top-[70px] right-0 bg-[#EFFAFF]  backdrop-blur-sm w-full flex flex-col items-center gap-4 py-4 z-40 md:hidden'>
+                           <Link href="/" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Home</Link>
+                           <Link href="/aboutus" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>About Us</Link>
+                           <Link href="/services" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Services</Link>
+                           <Link href="/gallery" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Gallery</Link>
+                           <Link href="/ports-we-serve" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Ports We Serve</Link>
+                           <Link href="/supply" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>What We Supply</Link>
                            <button 
                              onClick={scrollToContact}
                              className='bg-[#0000FF] text-white flex px-4 items-center justify-center rounded-full hover:bg-[#0000CC] font-semibold gap-1 text-sm transition-colors cursor-pointer'
