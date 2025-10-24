@@ -103,7 +103,7 @@ const textBlocks = [
 
 const Section2 = () => {
   return (
-    <div className="flex flex-col w-[85%] h-fit mx-auto my-20">
+    <div className="flex flex-col w-[85%]   h-fit mx-auto my-20">
       <div className="flex flex-col md:flex-row justify-between items-start gap-10">
         {/* Left: Static Header Section */}
         <div className="flex w-full max-w-[600px] flex-col gap-6">
@@ -116,7 +116,7 @@ const Section2 = () => {
         </div>
 
         {/* Right: Scrollable Text Blocks */}
-        <div className="w-full md:w-[800px] h-[450px] overflow-y-scroll scrollbar-hide">
+        <div className="w-full md:w-[800px] h-[530px] overflow-y-scroll scrollbar-hide">
           <div className="space-y-8 pr-4">
             {textBlocks.map((block, index) => (
               <div key={block.key} className="flex flex-col gap-6 p-6 bg-gray-50 rounded-3xl">

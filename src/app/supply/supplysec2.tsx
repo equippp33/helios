@@ -209,7 +209,7 @@ return (
       </div>
 
       {/* Right Text Section */}
-      <div className="flex-1 flex flex-col justify-center ml-4 w-full items-start px-10 bg-transparent h-[60vh] md:h-[70vh] relative z-10">
+      <div className="flex-1 flex flex-col justify-center ml-4 w-[96%] items-start px-10 bg-transparent h-[60vh] md:h-[70vh] relative z-10">
         <h2 className="text-gray-800 text-lg font-semibold">{currentSlide.title}</h2>
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">
           {currentSlide.subtitle}
