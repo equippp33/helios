@@ -1,7 +1,17 @@
+'use client'
 import React  from 'react'
 
 
 const Sec1 = () => {
+  const scrollToContact = () => {
+     const contactSection = document.getElementById('contact');
+     if (contactSection) {
+       contactSection.scrollIntoView({ 
+         behavior: 'smooth',
+         block: 'start'
+       });
+     } 
+   };
   
   return (
     <div className='relative w-full h-screen px-8 overflow-hidden'>
@@ -31,7 +41,9 @@ const Sec1 = () => {
         <p className="text-[20px] font-grotesk text-white mb-8 w-[90%]">At Helios Shipping and Trading, we provide seamless supplies and services to all major Indian ports.
            From essential provisions to technical support, our dedicated team ensures efficiency, reliability, and excellence at every port we operate.</p>
 
-        <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition w-fit">
+        <button 
+         onClick={scrollToContact}
+         className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition w-fit">
           Request a Quote Now
         </button>
 

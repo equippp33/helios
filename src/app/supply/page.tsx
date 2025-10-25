@@ -8,6 +8,7 @@ import Navbar from "../_components/navbar";
 
 import Footer from "../_components/footer";
 import SectionShowcase from "./supplysec2";
+import Contact from "../_components/contact";
 
 
 
@@ -29,6 +30,7 @@ export default async function Home() {
                 <Sec1/>
        </section>
        <section><SectionShowcase/></section>
+       <section><Contact /></section>
        
        <section><Footer/></section>
       </main>

@@ -56,7 +56,9 @@ const Navbar = () => {
   return (
     <nav className={`px-6 fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
         <div className='w-full max-w-full flex flex-row justify-between bg-transparent items-center'>
-          <Image src="/logo.svg" alt="logo" width={100} height={100} className='object-contain'/>
+          <Link href="/" className='flex items-center'>
+            <Image src="/logo.svg" alt="logo" width={100} height={100} className='object-contain'/>
+          </Link>
           <div className='hidden md:flex flex-row gap-4'>
               <div className={`flex flex-row gap-6 px-6 py-4 mx-4 rounded-full transition-all duration-300 ${
                 isScrolled 
@@ -120,7 +122,7 @@ const Navbar = () => {
                            <Link href="/supply" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>What We Supply</Link>
                            <button 
                              onClick={scrollToContact}
-                             className='bg-[#0000FF] text-white flex px-4 items-center justify-center rounded-full hover:bg-[#0000CC] font-semibold gap-1 text-sm transition-colors cursor-pointer'
+                             className='bg-[#0000FF] h-[50px] text-white flex px-4 items-center justify-center rounded-full hover:bg-[#0000CC] font-semibold gap-1 text-sm transition-colors cursor-pointer'
                            >
                              <PhoneIcon size={18}/>Contact us
                            </button>

@@ -8,6 +8,7 @@ import Navbar from "../_components/navbar";
 
 import Footer from "../_components/footer";
 import Section2 from "./section2";
+import Contact from "../_components/contact";
 
 
 
@@ -30,6 +31,7 @@ export default async function Home() {
        </section>
        
        <section className="flex justify-center"><Section2/></section>
+       <section><Contact /></section>
        <section><Footer/></section>
       </main>
     </HydrateClient>

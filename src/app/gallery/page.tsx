@@ -8,6 +8,7 @@ import Navbar from "./navbar";
 
 import Footer from "../_components/footer";
 import Imagesection from "./Imagesec";
+import Contact from "../_components/contact";
 
 
 
@@ -26,6 +27,7 @@ export default async function Home() {
        <section className="h-[100px]"><Navbar/></section>
        
        <section><Imagesection/></section>
+       <section><Contact /></section>
        <section><Footer/></section>
       </main>
     </HydrateClient>
