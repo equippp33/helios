@@ -25,7 +25,7 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>
@@ -46,7 +46,7 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>
@@ -67,7 +67,7 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>
@@ -88,7 +88,7 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='#' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
                 <span className="text-white  text-xl">↗</span>
               </a>
             </div>
