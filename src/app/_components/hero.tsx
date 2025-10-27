@@ -43,7 +43,7 @@ const Hero = () => {
     },
   };
   return (
-    <div className='relative w-full h-screen px-8 overflow-hidden'>
+    <div className='relative w-full h-screen md:px-8 px-4 overflow-hidden'>
       {/* Background Video Carousel */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -98,8 +98,8 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center max-w-[1400px] px-8">
-        <h1 className="md:text-5xl text-xl text-white font-semibold mb-6 leading-tight tracking-tight">
+      <div className="relative z-10 h-full flex flex-col justify-center max-w-[1400px] md:px-8 px-4">
+        <h1 className="md:text-5xl text-2xl text-white font-semibold mb-6 leading-tight tracking-tight">
           {content[active].title}
         </h1>
 
