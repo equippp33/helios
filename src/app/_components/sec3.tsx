@@ -51,7 +51,7 @@ const Sec3 = (): React.JSX.Element => {
 
       {/* Features Section */}
       <div className="w-full max-w-[1400px] mx-auto mb-10 mt-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-4 px-2 bg-white">
           {features.map((feature, index) => (
             <div
               key={index}

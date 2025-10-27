@@ -12,12 +12,12 @@ const Sec6 = () => {
 
   const faqData = [
     {
-      question: "How do I Enroll?",
-      answer: "You can enroll by visiting our website and selecting the course you're interested in. Then follow the checkout process."
+      question: "24/7 Support you can rely on",
+      answer: "yes, you can rely completely on us."
     },
     {
-      question: "Do I get Access to previous Session recordings?",
-      answer: "Yes, all enrolled students get lifetime access to previous session recordings via our learning portal."
+      question: "24/7 Support you can rely on",
+      answer: "Yes, you can rely completely on us"
     }
     
   ];
