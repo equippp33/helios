@@ -54,7 +54,7 @@ const Navbar = () => {
    }, [isDropdownOpen]);
 
   return (
-    <nav className={`px-6 fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
+    <nav className={`px-6 fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-[#EFFAFF]' : 'bg-transparent'}`}>
         <div className='w-full max-w-full flex flex-row justify-between bg-transparent items-center'>
           <Link href="/" className='flex items-center'>
             <Image src="/logo.svg" alt="logo" width={100} height={100} className='object-contain'/>
@@ -62,7 +62,7 @@ const Navbar = () => {
           <div className='hidden md:flex flex-row gap-4'>
               <div className={`flex flex-row gap-6 px-6 py-4 mx-4 rounded-full transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-black' 
+                  ? 'text-black ' 
                   : 'text-white bg-white/10 backdrop-blur-sm'
               }`}>
                   <Link href="/" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Home</Link>
