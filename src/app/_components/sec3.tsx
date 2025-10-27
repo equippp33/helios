@@ -55,10 +55,8 @@ const Sec3 = (): React.JSX.Element => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="relative p-8 min-h-[220px] flex flex-col justify-between"
-              style={{
-                borderRight: index < features.length - 1 ? '3px solid #000' : 'none'
-              }}
+              className="relative md:border-r-2 md:border-b-0 border-b-2 border-black p-8 min-h-[220px] flex flex-col justify-between"
+              
             >
               {/* Icon in top-right */}
               <div className="absolute top-4 right-4">

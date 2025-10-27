@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 const Sec4 = () => {
@@ -17,7 +18,7 @@ const Sec4 = () => {
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-2xl font-semibold">Ship Chandling & Provisions</h2>
+                  <h2 className="text-2xl mt-2 font-semibold">Ship Chandling & Provisions</h2>
                 </div>
                 <p className="text-lg">
                   Dependable ship chandling with fresh supplies, delivered 24/7 to every major port.
@@ -25,8 +26,8 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <span className="text-white  text-xl">↗</span>
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
@@ -38,7 +39,7 @@ const Sec4 = () => {
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-2xl font-semibold">Technical Stores & Spare Parts</h2>
+                  <h2 className="text-2xl mt-2 font-semibold">Technical Stores & Spare Parts</h2>
                 </div>
                 <p className="text-lg">
                  Complete deck, engine, and electrical supplies to ensure your vessel operates flawlessly.
@@ -46,8 +47,8 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <span className="text-white  text-xl">↗</span>
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
@@ -59,7 +60,7 @@ const Sec4 = () => {
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-2xl font-semibold">Safety Systems & Certification</h2>
+                  <h2 className="text-2xl mt-2 font-semibold">Safety Systems & Certification</h2>
                 </div>
                 <p className="text-lg">
                   Certified inspections and servicing to guarantee compliance and protect your crew.
@@ -67,8 +68,8 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <span className="text-white  text-xl">↗</span>
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
@@ -80,7 +81,7 @@ const Sec4 = () => {
               {/* Text Content */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-2xl font-semibold">Mechanical & Technical Services</h2>
+                  <h2 className="text-2xl mt-2 font-semibold">Mechanical & Technical Services</h2>
                 </div>
                 <p className="text-lg " >
                   Professional repair and maintenance, onboard or at port, whenever you need it.
@@ -88,8 +89,8 @@ const Sec4 = () => {
               </div>
         
               {/* Top right icon box */}
-              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <span className="text-white  text-xl">↗</span>
+              <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
+                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
