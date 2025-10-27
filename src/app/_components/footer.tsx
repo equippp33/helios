@@ -51,7 +51,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Address</h3>
             <div className="rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps?q=chamra,+india&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9978.626800196336!2d83.28022958363601!3d17.686657180933253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1761555510103!5m2!1sen!2sin"                
                 className="w-full h-32 rounded-md border-0"
                 loading="lazy"
               ></iframe>
