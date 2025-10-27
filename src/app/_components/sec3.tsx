@@ -43,7 +43,7 @@ const Sec3 = (): React.JSX.Element => {
               height={550}
               priority
               unoptimized
-              className="lg:w-[700px] sm:w-[200px] w-[100px] lg:h-[550px] sm:h-[200px] h-[150px]"
+              className="lg:w-[700px] sm:w-[200px] w-[100px] lg:h-[525px] sm:h-[200px] h-fit"
             />
           </div>
         </div>

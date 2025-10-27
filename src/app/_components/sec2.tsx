@@ -9,7 +9,7 @@ const Sec2 = () => {
         <h1 className='text-3xl md:text-4xl font-semibold'>India’s Leading Marine Supply Partner</h1>
         <ul className="mt-4 space-y-2 text-gray-700 list-disc px-6">
           <li>
-            At Helios Shipping and Trading, we go beyond ship handling — we`&apos;`re
+            At Helios Shipping and Trading, we go beyond ship handling — we&apos;re
             your complete marine logistics and supply partner.
           </li>
           <li>

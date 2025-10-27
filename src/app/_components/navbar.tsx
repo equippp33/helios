@@ -113,13 +113,13 @@ const Navbar = () => {
                        </div>
                         {/* Mobile Menu */}
                        {isMenuOpen && (
-                         <div className='absolute top-[70px] right-0 bg-white/20  backdrop-blur-sm w-full flex flex-col items-center gap-4 py-4 z-40 md:hidden'>
-                           <Link href="/" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Home</Link>
-                           <Link href="/aboutus" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>About Us</Link>
-                           <Link href="/services" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Services</Link>
-                           <Link href="/gallery" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Gallery</Link>
-                           <Link href="/ports-we-serve" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>Ports We Serve</Link>
-                           <Link href="/supply" className='text-white hover:text-[#FFFF00] font-semibold text-sm'>What We Supply</Link>
+                         <div className='absolute top-[70px] right-0 bg-[#EFFAFF]  backdrop-blur-sm w-full flex flex-col items-center gap-4 py-4 z-40 md:hidden'>
+                           <Link href="/" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Home</Link>
+                           <Link href="/aboutus" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>About Us</Link>
+                           <Link href="/services" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Services</Link>
+                           <Link href="/gallery" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Gallery</Link>
+                           <Link href="/ports-we-serve" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>Ports We Serve</Link>
+                           <Link href="/supply" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>What We Supply</Link>
                            <button 
                              onClick={scrollToContact}
                              className='bg-[#0000FF] h-[50px] text-white flex px-4 items-center justify-center rounded-full hover:bg-[#0000CC] font-semibold gap-1 text-sm transition-colors cursor-pointer'

@@ -120,7 +120,7 @@ const Navbar = () => {
                            <Link href="/supply" className='text-black hover:text-[#FFFF00] font-semibold text-sm'>What We Supply</Link>
                            <button 
                              onClick={scrollToContact}
-                             className='bg-[#0000FF] text-white flex px-4 items-center justify-center rounded-full hover:bg-[#0000CC] font-semibold gap-1 text-sm transition-colors cursor-pointer'
+                             className='bg-[#0000FF] text-white flex px-4 items-center h-[50px] justify-center rounded-full hover:bg-[#0000CC] font-semibold gap-1 text-sm transition-colors cursor-pointer'
                            >
                              <PhoneIcon size={18}/>Contact us
                            </button>
