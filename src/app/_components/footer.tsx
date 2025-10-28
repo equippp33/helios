@@ -28,9 +28,9 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="hover:text-yellow-400">About us</Link></li>
-                <li><Link href="#" className="hover:text-yellow-400">Contact us</Link></li>
-                <li><Link href="#" className="hover:text-yellow-400">Services</Link></li>
+                <li><Link href="/aboutus" className="hover:text-yellow-400">About us</Link></li>
+                <li><Link href="contactus" className="hover:text-yellow-400">Contact us</Link></li>
+                <li><Link href="services" className="hover:text-yellow-400">Services</Link></li>
               </ul>
             </div>
       
