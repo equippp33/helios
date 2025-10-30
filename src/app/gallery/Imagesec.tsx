@@ -13,7 +13,14 @@ const ImageSection = () => {
     { src: '/g8.svg', alt: 'Gallery Image 8' },
     { src: '/g9.svg', alt: 'Gallery Image 9' },
     { src: '/g10.svg', alt: 'Gallery Image 10' },
-    { src: '/g11.svg', alt: 'Gallery Image 11' }
+    { src: '/g11.svg', alt: 'Gallery Image 11' },
+    { src: '/g12.jpg', alt: 'Gallery Image 12' },
+    { src: '/g13.jpg', alt: 'Gallery Image 13' },
+    { src: '/g14.jpg', alt: 'Gallery Image 14' },
+    { src: '/g15.jpg', alt: 'Gallery Image 15' },
+    { src: '/g16.jpg', alt: 'Gallery Image 16' },
+    { src: '/g17.jpg', alt: 'Gallery Image 17' },
+    { src: '/g18.jpg', alt: 'Gallery Image 18' },
   ];
 
   return (
