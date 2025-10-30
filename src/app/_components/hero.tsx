@@ -21,9 +21,9 @@ const Hero = () => {
 
   const content: Record<ContentKey, { title: string; subtitle: string; button: string; video: string }> = {
     1: {
-      title: "India's Fastest Certified Marine Supplier",
+      title: "WELCOME TO HELIOS",
       subtitle:
-        "Supplying provisions, technical stores, and safety equipment across all major Indian ports — 24/7, certified, and guaranteed.",
+        "Helios Shipping and Trading offers offshore and marine services. We have created a network of strong and close business relationships over the years, offering clients with rapid and trustworthy services, high quality products, and always competitive costs. Across all Indian major ports, we provide 24/7 service.",
       button: "Request a Quote Now",
       video: "https://images.equippp.global/Video1.webm",
     },
@@ -103,7 +103,7 @@ const Hero = () => {
           {content[active].title}
         </h1>
 
-        <p className="md:text-lg text-sm font-grotesk text-white mb-8 max-w-2xl">{content[active].subtitle}</p>
+        <p className="md:text-lg text-sm font-grotesk text-white mb-8 max-w-[1000px]">{content[active].subtitle}</p>
 
         <button
          onClick={scrollToContact} 
