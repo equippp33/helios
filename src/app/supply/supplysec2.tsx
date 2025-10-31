@@ -14,7 +14,7 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: 1,
-    image: '/supply1.svg',
+    image: '/images/supply1.svg',
     title: '01',
     subtitle: 'Deck & Engine Materials',
     description:
@@ -22,7 +22,7 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    image: '/supply2.svg',
+    image: '/images/supply2.svg',
     title: '02',
     subtitle: 'Waste Oil & Sludge Management',
     description:
@@ -30,7 +30,7 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    image: '/supply3.svg',
+    image: '/images/supply3.svg',
     title: '03',
     subtitle: 'Marine Provisions',
     description:
@@ -39,7 +39,7 @@ const slides: Slide[] = [
 
   {
     id: 4,
-    image: '/supply4.svg',
+    image: '/images/supply4.svg',
     title: '04',
     subtitle: 'Lifeboat & Safety Certification',
     description:
@@ -48,7 +48,7 @@ const slides: Slide[] = [
 
   {
     id: 5,
-    image: '/supply5.svg',
+    image: '/images/supply5.svg',
     title: '05',
     subtitle: 'Navigation & Electronics',
     description:
@@ -57,7 +57,7 @@ const slides: Slide[] = [
 
   {
     id: 6,
-    image: '/supply6.svg',
+    image: '/images/supply6.svg',
     title: '06',
     subtitle: 'General Technical Stores',
     description:
@@ -66,7 +66,7 @@ const slides: Slide[] = [
 
   {
     id: 7,
-    image: '/supply7.svg',
+    image: '/images/supply7.svg',
     title: '07',
     subtitle: 'Industrial Chemicals & Gases',
     description:
@@ -75,7 +75,7 @@ const slides: Slide[] = [
 
   {
     id: 8,
-    image: '/supply8.svg',
+    image: '/images/supply8.svg',
     title: '08',
     subtitle: 'Safety & Nautical Gear',
     description:
@@ -84,7 +84,7 @@ const slides: Slide[] = [
 
   {
     id: 9,
-    image: '/supply9.svg',
+    image: '/images/supply9.svg',
     title: '09',
     subtitle: 'Mooring & Steel Wire Ropes',
     description:
@@ -93,7 +93,7 @@ const slides: Slide[] = [
 
   {
     id: 10,
-    image: '/supply10.svg',
+    image: '/images/supply10.svg',
     title: '10',
     subtitle: 'Marine Paints & Cleaning Kits',
     description:
@@ -102,7 +102,7 @@ const slides: Slide[] = [
 
   {
     id: 11,
-    image: '/supply11.svg',
+    image: '/images/supply11.svg',
     title: '11',
     subtitle: 'Ship System Repairs',
     description:
@@ -111,7 +111,7 @@ const slides: Slide[] = [
 
   {
     id: 12,
-    image: '/supply12.svg',
+    image: '/images/supply12.svg',
     title: '12',
     subtitle: 'Pilot Ladders & Embarkation Gear',
     description:

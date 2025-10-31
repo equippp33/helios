@@ -24,21 +24,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, bgC
   );
 };
 
-const Sec8: React.FC = () => {
+const Solutions: React.FC = () => {
   // SVG Icons
   const MarineIcon = (
     // Placeholder for boat icon (similar to a cargo ship or supply boat)
-    <Image src='/ship1.svg' alt='shipicon' width={90} height={90} className='bg-transparent rounded-2xl'/>
+    <Image src='/images/ship1.svg' alt='shipicon' width={90} height={90} className='bg-transparent rounded-2xl'/>
   );
 
   const InspectionIcon = (
     // Placeholder for calendar/magnifying glass icon (Inspection & Certification)
-    <Image src='/plank.svg' alt='shipicon' width={90} height={90} className='bg-transparent rounded-2xl'/>
+    <Image src='/images/plank.svg' alt='shipicon' width={90} height={90} className='bg-transparent rounded-2xl'/>
   );
 
   const SupportIcon = (
     // Placeholder for headset icon (24/7 Support)
-    <Image src='/agent.svg' alt='shipicon' width={90} height={90} className='bg-transparent rounded-2xl'/>
+    <Image src='/images/agent.svg' alt='shipicon' width={90} height={90} className='bg-transparent rounded-2xl'/>
   );
 
   return (
@@ -88,4 +88,4 @@ const Sec8: React.FC = () => {
   );
 };
 
-export default Sec8;
+export default Solutions;

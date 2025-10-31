@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Sec2 = () => {
+const About = () => {
   return (
     <div className='flex flex-col lg:flex-row items-center justify-between w-full bg-white px-2 md:px-12 py-12'>
       <div className='flex flex-col w-full max-w-[850px] gap-4 md:gap-6 px-4 '>
@@ -14,10 +14,10 @@ const Sec2 = () => {
 
 
       </div>
-      <Image src="/sec2_ship.svg" alt="ship" width={600} height={300} className='object-contain lg:h-[240px] px-4 '/>
+      <Image src="/images/sec2_ship.svg" alt="ship" width={600} height={300} className='object-contain lg:h-[240px] px-4 '/>
 
     </div>
   )
 }
 
-export default Sec2;
+export default About;

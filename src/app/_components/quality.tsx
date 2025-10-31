@@ -8,31 +8,31 @@ const steps = [
     step: "STEP 01",
     title: "Customer-Centric Approach",
     description: "We prioritize understanding and exceeding our clients’ needs at every step.",
-    icon: <Image src='/userstar.svg' alt='parcel' width={75} height={75} className="" />,
+    icon: <Image src='/images/userstar.svg' alt='parcel' width={75} height={75} className="" />,
   },
   {
     step: "STEP 02",
     title: "Operational Efficiency",
     description: "Streamlined logistics and rigorous quality control guarantee smooth operations.",
-    icon: <Image src='/deliveryparcel.svg' alt='parcel' width={75} height={75} className="" />,
+    icon: <Image src='/images/deliveryparcel.svg' alt='parcel' width={75} height={75} className="" />,
     
   },
   {
     step: "STEP 03",
     title: "Punctual Delivery",
     description: "On-time service is our promise to every vessel and port.",
-    icon: <Image src='/truck.svg' alt='parcel' width={75} height={75} className="" />,
+    icon: <Image src='/images/truck.svg' alt='parcel' width={75} height={75} className="" />,
     
   },
   {
     step: "STEP 04",
     title: "Continuous Innovation",
     description: "We constantly enhance our processes and services to stay ahead in the maritime industry.",
-    icon: <Image src='/hand.svg' alt='parcel' width={75} height={75} className="" />,
+    icon: <Image src='/images/hand.svg' alt='parcel' width={75} height={75} className="" />,
   },
 ];
 
-const Sec7 = () => {
+const Quality = () => {
   return (
     <section className="bg-[#003049] h-fit w-full text-white py-12 px-6">
       <div className="mx-auto mb-10 w-full max-w-[90%] px-4">
@@ -65,4 +65,4 @@ const Sec7 = () => {
   );
 };
 
-export default Sec7;
+export default Quality;

@@ -5,9 +5,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Contact from '../_components/contact';
 import Navbar from '../_components/navbar';
-import sec1 from '../gallery/sec1';
+import sec1 from '../gallery/hero';
 import Footer from '../_components/footer';
-import Sec1 from '../gallery/sec1';
+import Sec1 from '../gallery/hero';
 
 interface PortData {
   id: string;

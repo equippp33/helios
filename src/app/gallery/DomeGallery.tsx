@@ -35,17 +35,17 @@ type ItemDef = {
 };
 
 const DEFAULT_IMAGES: ImageItem[] = [
-  '/g1.svg',
-  '/g2.svg', 
-  '/g3.svg',
-  '/g4.svg',
-  '/g5.svg',
-  '/g6.svg',
-  '/g7.svg',
-  '/g8.svg',
-  '/g9.svg',
-  '/g10.svg',
-  '/g11.svg'
+  '/images/g1.svg',
+  '/images/g2.svg', 
+  '/images/g3.svg',
+  '/images/g4.svg',
+  '/images/g5.svg',
+  '/images/g6.svg',
+  '/images/g7.svg',
+  '/images/g8.svg',
+  '/images/g9.svg',
+  '/images/g10.svg',
+  '/images/g11.svg'
 ];
 
 const DEFAULTS = {

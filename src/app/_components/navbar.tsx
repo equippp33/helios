@@ -57,7 +57,7 @@ const Navbar = () => {
     <nav className={`lg:px-8 px-6 fixed  left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-[#EFFAFF] top-0' : 'bg-transparent top-10'}`}>
         <div className='w-full max-w-full flex flex-row justify-between bg-transparent items-center'>
           <Link href="/" className='flex items-center'>
-            <Image src="/logo.svg" alt="logo" width={300} height={100} className='object-contain'/>
+            <Image src="/images/logo.svg" alt="logo" width={300} height={100} className='object-contain'/>
           </Link>
           <div className='hidden md:flex flex-row gap-4'>
               <div className={`flex flex-row gap-6 px-6 py-4 mx-4 rounded-full transition-all duration-300 ${
@@ -69,7 +69,9 @@ const Navbar = () => {
                   <Link href="/aboutus" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>About Us</Link>
                   <Link href="/services" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Services</Link>
                   <Link href="/gallery" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Gallery</Link>
-                  <div className="relative dropdown-container">
+                  <Link href="/gallery" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>Ports We Serve</Link>
+                  <Link href="/gallery" className={`font-semibold text-sm transition-colors ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}>What We Supply</Link>
+                  {/*<div className="relative dropdown-container">
                     <button 
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                       className={`font-semibold text-sm transition-colors flex items-center gap-1 ${isScrolled ? 'text-black hover:text-blue-600' : 'text-white hover:text-[#FFFF00]'}`}
@@ -87,7 +89,7 @@ const Navbar = () => {
                         </Link>
                       </div>
                     )}
-                  </div>
+                  </div>*/}
               </div>
               <button 
                 onClick={scrollToContact}

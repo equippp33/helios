@@ -4,14 +4,14 @@ import React from 'react';
 import Image from 'next/image';
 
 const images = [
-  '/crane.svg',
-  '/s2.svg',
-  '/s3.svg',
-  '/s4.svg',
-  '/s5.svg',
-  '/s6.svg',
-  '/s7.svg',
-  '/s8.svg',
+  '/images/crane.svg',
+  '/images/s2.svg',
+  '/images/s3.svg',
+  '/images/s4.svg',
+  '/images/s5.svg',
+  '/images/s6.svg',
+  '/images/s7.svg',
+  '/images/s8.svg',
 ] as const;
 
 const textBlocks = [

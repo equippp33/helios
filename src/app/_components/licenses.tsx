@@ -2,14 +2,14 @@ import Image from 'next/image';
 import React from 'react'
 
 const logos = [
-  { src: "/impa.svg", alt: "IMPA" },
-  { src: "/iso_.svg", alt: "ISO" },
-  { src: "/shipserve.svg", alt: "Shipserve" },
-  { src: "/iso.svg", alt: "ISO" },
-  { src: "/fssai.svg", alt: "FSSAI" },
+  { src: "/images/impa.svg", alt: "IMPA" },
+  { src: "/images/iso_.svg", alt: "ISO" },
+  { src: "/images/shipserve.svg", alt: "Shipserve" },
+  { src: "/images/iso.svg", alt: "ISO" },
+  { src: "/images/fssai.svg", alt: "FSSAI" },
 ];
 
-const Companies = () => {
+const Licenses = () => {
   return (
     <div className='flex w-[86.5%] px-2 h-fit md:h-[260px]  flex-col gap-4 justify-center items-center rounded-2xl bg-[#F9F9F9] m-4 overflow-hidden'>
       <h1 className='md:text-3xl text-xl md:mb-6 md:mt-4 my-2 font-semibold'>Licenses</h1>
@@ -57,4 +57,4 @@ const Companies = () => {
   )
 }
 
-export default Companies;
+export default Licenses;

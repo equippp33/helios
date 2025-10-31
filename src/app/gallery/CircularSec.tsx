@@ -3,17 +3,17 @@ import CircularGallery from './CircularGallery';
 
 const ImageSection = () => {
   const galleryItems = [
- { image: '/g1.svg', text: 'Gallery Image 1' },
- { image: '/g2.svg', text: 'Gallery Image 2' },
- { image: '/g3.svg', text: 'Gallery Image 3' },
- { image: '/g4.svg', text: 'Gallery Image 4' },
- { image: '/g5.svg', text: 'Gallery Image 5' },
- { image: '/g6.svg', text: 'Gallery Image 6' },
- { image: '/g7.svg', text: 'Gallery Image 7' },
- { image: '/g8.svg', text: 'Gallery Image 8' },
- { image: '/g9.svg', text: 'Gallery Image 9' },
- { image: '/g10.svg', text: 'Gallery Image 10' },
- { image: '/g11.svg', text: 'Gallery Image 11' }
+ { image: '/images/g1.svg', text: 'Gallery Image 1' },
+ { image: '/images/g2.svg', text: 'Gallery Image 2' },
+ { image: '/images/g3.svg', text: 'Gallery Image 3' },
+ { image: '/images/g4.svg', text: 'Gallery Image 4' },
+ { image: '/images/g5.svg', text: 'Gallery Image 5' },
+ { image: '/images/g6.svg', text: 'Gallery Image 6' },
+ { image: '/images/g7.svg', text: 'Gallery Image 7' },
+ { image: '/images/g8.svg', text: 'Gallery Image 8' },
+ { image: '/images/g9.svg', text: 'Gallery Image 9' },
+ { image: '/images/g10.svg', text: 'Gallery Image 10' },
+ { image: '/images/g11.svg', text: 'Gallery Image 11' }
   ];
 
   return (

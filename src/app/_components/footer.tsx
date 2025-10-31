@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Left side: Logo */}
         <div className="flex justify-center md:justify-start md:w-1/3">
     <Image
-      src="/logo.svg"
+      src="/images/logo.svg"
       alt="Helios Shipping & Trading"
       width={200}
       height={200}

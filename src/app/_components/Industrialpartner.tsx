@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 
-const Sec4 = () => {
+const Industrialpartner = () => {
   return (
     <div className='w-full flex flex-col  p-4 md:p-8 lg:px-16 h-fit bg-[#003751]'>
         <h1 className='my-10 text-white font-bold text-xl md:text-4xl pb-10 border-b-2 border-white'>India&apos;s Premier Marine & Industrial Partner</h1>
@@ -27,7 +27,7 @@ const Sec4 = () => {
         
               {/* Top right icon box */}
               <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
+                <Image src='/images/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
@@ -48,7 +48,7 @@ const Sec4 = () => {
         
               {/* Top right icon box */}
               <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
+                <Image src='/images/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
@@ -69,7 +69,7 @@ const Sec4 = () => {
         
               {/* Top right icon box */}
               <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
+                <Image src='/images/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
@@ -90,7 +90,7 @@ const Sec4 = () => {
         
               {/* Top right icon box */}
               <a href='/services' className="absolute top-0 right-0 w-10 h-10 bg-transparent max-sm:bg-yellow-400 border-l-2 border-b-2 border-[#EFFAFF52] group-hover:bg-yellow-400 flex items-center justify-center z-20">
-                <Image src='/arrowup.svg' width={30} height={30} alt='arrowup'/>
+                <Image src='/images/arrowup.svg' width={30} height={30} alt='arrowup'/>
               </a>
             </div>
 
@@ -99,4 +99,4 @@ const Sec4 = () => {
   )
 }
 
-export default Sec4;
+export default Industrialpartner;

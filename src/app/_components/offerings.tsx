@@ -14,31 +14,31 @@ const offerings = [
     id: "01",
     title: "Deck & Engine Materials",
     description: "Essential tools and equipment to keep your decks and engines running efficiently",
-    image: "/offering1.svg",
+    image: "/images/offering1.svg",
   },
   {
     id: "02",
     title: "Waste Oil & Sludge Management",
     description: "Safe and compliant removal of sludge and waste oil from vessels",
-    image: "/sludgemanagement.svg",
+    image: "/images/sludgemanagement.svg",
   },
   {
     id: "03",
     title: "Marine Provisions",
     description: "Fresh, frozen, and dry food supplies tailored for every crew’s needs",
-    image: "/marineprovisions.svg",
+    image: "/images/marineprovisions.svg",
   },
   {
     id: "04",
     title: "Lifeboat & Safety Certification",
     description: "Professional inspection and certification services for lifeboats and life rafts",
-    image: "/lifeboat.svg",
+    image: "/images/lifeboat.svg",
   },
   {
     id: "05",
     title: "Navigation & Electronics",
     description: "Maintenance and repair for navigation systems and electronic instruments",
-    image: "/navigation.svg",
+    image: "/images/navigation.svg",
   },
 ];
 
@@ -70,7 +70,7 @@ const OfferingRow = ({ id, title, description, image }: Offering) => {
   );
 };
 
-const Sec5 = () => {
+const Offerings = () => {
   return (
     <div className="w-full flex flex-col gap-4 lg:gap-8 mx-auto mb-5 p-6 md:px-16 md:py-8 ">
       <div className="flex flex-col mt-6 md:flex-row justify-between items-center h-fit mb-8">
@@ -99,4 +99,4 @@ const Sec5 = () => {
   );
 };
 
-export default Sec5;
+export default Offerings;

@@ -1,25 +1,25 @@
 import Image from 'next/image';
 import React from 'react';
 
-const Sec3 = (): React.JSX.Element => {
+const Worldmap = (): React.JSX.Element => {
   const features = [
     {
-      icon: "/package.svg",
+      icon: "/images/package.svg",
       title: "5,450+ products, always in stock",
       alt: "package"
     },
     {
-      icon: "/circle-half.svg",
+      icon: "/images/circle-half.svg",
       title: "Nationwide coverage – major & minor ports",
       alt: "coverage"
     },
     {
-      icon: "/ship-fill.svg",
+      icon: "/images/ship-fill.svg",
       title: "Round-the-clock emergency support",
       alt: "support"
     },
     {
-      icon: "/space-ship.svg",
+      icon: "/images/space-ship.svg",
       title: "Certified expertise in marine safety & inspections",
       alt: "expertise"
     }
@@ -37,7 +37,7 @@ const Sec3 = (): React.JSX.Element => {
         <div className="relative w-full h-[200px] md:h-fit">
           <div className="absolute top-0 w-auto flex items-start max-w-[500px] left-0 animate-slideXToFro">
             <Image
-              src="/container.svg"
+              src="/images/container.svg"
               alt="container"
               width={700}
               height={550}
@@ -83,4 +83,4 @@ const Sec3 = (): React.JSX.Element => {
   );
 };
 
-export default Sec3;
+export default Worldmap;

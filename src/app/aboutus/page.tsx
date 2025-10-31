@@ -8,8 +8,8 @@ import Navbar from "../_components/navbar";
 
 import Footer from "../_components/footer";
 import Ourmission from "./ourmission";
-import Sec7 from "../_components/sec7";
-import Companies from "../_components/sec9";
+import Sec7 from "../_components/quality";
+import Companies from "../_components/licenses";
 import Contact from "../_components/contact";
 
 

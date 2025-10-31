@@ -2,7 +2,7 @@ import Link from "next/link";
 
 
 import { HydrateClient } from "~/trpc/server";
-import Sec1 from "./sec1";
+import Sec1 from "./hero";
 
 import Navbar from "./navbar";
 

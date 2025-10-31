@@ -4,19 +4,20 @@ import '../styles/globals.css';
 
 import { HydrateClient } from "~/trpc/server";
 import Hero from "./_components/hero";
-import Sec2 from "./_components/sec2";
+import About from "./_components/about";
 import Navbar from "./_components/navbar";
-import Sec3 from "./_components/sec3";
+
 import Footer from "./_components/footer";
-import Sec4 from "./_components/sec4";
-import Sec5 from "./_components/sec5";
-import Sec6 from "./_components/sec6";
-import Sec7 from "./_components/sec7";
-import Sec8 from "./_components/sec8";
-import Companies from "./_components/sec9";
+import Industrialsection from "./_components/Industrialpartner";
+import Offerings from "./_components/offerings";
+import Shipbuilding from "./_components/shipbuilding";
+import Quality from "./_components/quality";
+import Solutions from "./_components/solutions";
+import Licenses from "./_components/licenses";
 import CircularSec from "./gallery/CircularSec";
 import Contact from "./_components/contact";
-import Sec31 from "./_components/sec31";
+import Imagesection from "./_components/Imagesection";
+import Certifications from "./_components/certifications";
 
 
 
@@ -34,18 +35,18 @@ export default async function Home() {
                 style={{ backgroundImage: "url('/ship.svg')" }}>
                 <Hero/>
        </section>
-       <section><Sec2/></section>
-       <section><Sec31/></section>
-       <section><Sec4/></section>
-       <section><Sec5/></section>
-       <section><CircularSec/></section>
-       <section><Sec6/></section>
-       <section><Sec7/></section>
-       <section><Sec8/></section>
-       <section className="flex w-full justify-center items-center"><Companies/></section>
-       
-       <section><Contact/></section>
-       <section><Footer/></section>
+       <section><About /></section>
+       <section><Imagesection /></section>
+       <section><Industrialsection /></section>
+       <section><Offerings /></section>
+       <section><CircularSec /></section>
+       <section><Shipbuilding /></section>
+       <section><Quality /></section>
+       <section><Solutions /></section>
+       <section className="flex w-full justify-center items-center"><Certifications /></section>
+       <section className="flex w-full justify-center items-center"><Licenses /></section>
+       <section><Contact /></section>
+       <section><Footer /></section>
       </main>
     </HydrateClient>
   );
