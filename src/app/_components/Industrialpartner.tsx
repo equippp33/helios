@@ -11,7 +11,7 @@ const Industrialpartner = () => {
         </div>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 p-2 mb-8'>
             <div
-              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/ship.svg')] bg-transparent sm:hover:bg-[url('/ship.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/images/ship.svg')] bg-transparent sm:hover:bg-[url('/images/ship.svg')] hover:bg-cover hover:bg-center"
             >
               
         
@@ -32,7 +32,7 @@ const Industrialpartner = () => {
             </div>
 
             <div
-              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/spares.svg')] bg-transparent sm:hover:bg-[url('/spares.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/images/spares.svg')] bg-transparent sm:hover:bg-[url('/images/spares.svg')] hover:bg-cover hover:bg-center"
             >
               
         
@@ -53,7 +53,7 @@ const Industrialpartner = () => {
             </div>
 
             <div
-              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/systems.svg')] bg-transparent sm:hover:bg-[url('/systems.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/images/systems.svg')] bg-transparent sm:hover:bg-[url('/images/systems.svg')] hover:bg-cover hover:bg-center"
             >
               
         
@@ -74,7 +74,7 @@ const Industrialpartner = () => {
             </div>
 
             <div
-              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/mechanical.svg')] bg-transparent sm:hover:bg-[url('/mechanical.svg')] hover:bg-cover hover:bg-center"
+              className="relative group w-[95%] group h-80 border border-[#EFFAFF52] text-white p-6 transition-all duration-500 max-sm:bg-[url('/images/mechanical.svg')] bg-transparent sm:hover:bg-[url('/images/mechanical.svg')] hover:bg-cover hover:bg-center"
             >
               
         
