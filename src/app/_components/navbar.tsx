@@ -54,7 +54,7 @@ const Navbar = () => {
    }, [isDropdownOpen]);
 
   return (
-    <nav className={`px-6 fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-[#EFFAFF]' : 'bg-transparent'}`}>
+    <nav className={`lg:px-8 px-6 fixed  left-0 w-full z-50 flex flex-row justify-between items-center transition-colors duration-300 ${isScrolled ? 'bg-[#EFFAFF] top-0' : 'bg-transparent top-10'}`}>
         <div className='w-full max-w-full flex flex-row justify-between bg-transparent items-center'>
           <Link href="/" className='flex items-center'>
             <Image src="/logo.svg" alt="logo" width={300} height={100} className='object-contain'/>
@@ -91,7 +91,7 @@ const Navbar = () => {
               </div>
               <button 
                 onClick={scrollToContact}
-                className='bg-[#0000FF] text-white flex px-4 items-center justify-center rounded-full hover:bg-[#0000CC] font-semibold gap-1 text-sm transition-colors cursor-pointer'
+                className='bg-white text-black flex px-4 items-center justify-center rounded-full  font-semibold gap-1 text-sm transition-colors cursor-pointer'
               >
                 <PhoneIcon size={18}/>Contact us
               </button>
