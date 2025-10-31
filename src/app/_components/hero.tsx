@@ -28,16 +28,16 @@ const Hero = () => {
       video: "https://images.equippp.global/Video1.webm",
     },
     2: {
-      title: "Partner with Us Today",
+      title: "Navya Logistics: Your Marine Logistics Partner",
       subtitle:
-        " Experience efficient, reliable marine services across all Indian ports, supporting seamless operations and fueling global trade.",
+        "Navya Logistics is your dedicated marine logistics partner, specializing in the reliable delivery of critical vessel resources. Our core service includes the supply of bunker fuel and fresh water by dedicated barge, ensuring prompt and efficient service directly to your vessel. We are committed to keeping your operations running smoothly and on schedule.",
       button: "Partner Now",
       video: "https://images.equippp.global/Video2.webm",
     },
     3: {
-      title: "Your Marine Logistics Partner ",
+      title: "Navya Waste and Used Oil Refining and Recycling Industry: Marine Environmental Solutions ♻️",
       subtitle:
-        "Providing comprehensive marine supplies and ship repair services across all major Indian ports. Committed to quality, reliability, and seamless operations.",
+        "We specialize in efficient and environmentally responsible sludge removal services for ships. Sludge, a byproduct of fuel oil purification and other onboard processes, can accumulate in tanks and machinery, posing operational and environmental challenges.",
       button: "Get Started",
       video: "https://images.equippp.global/Video3.webm",
     },
@@ -98,12 +98,12 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center max-w-[1400px] md:px-8 px-4">
-        <h1 className="md:text-5xl text-2xl text-white font-semibold mb-6 leading-tight tracking-tight">
+      <div className="relative z-10 h-full mt-20 flex flex-col justify-center max-w-[900px] md:px-8 px-4">
+        <h1 className="md:text-4xl text-2xl text-white font-semibold mb-2 leading-tight tracking-tight">
           {content[active].title}
         </h1>
 
-        <p className="md:text-lg text-sm font-grotesk text-white mb-8 max-w-[1000px]">{content[active].subtitle}</p>
+        <p className="md:text-base text-sm font-grotesk text-white mb-4 max-w-[900px]">{content[active].subtitle}</p>
 
         <button
          onClick={scrollToContact} 
