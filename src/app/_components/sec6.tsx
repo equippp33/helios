@@ -11,6 +11,12 @@ const Sec6 = () => {
     <div className='w-full bg-white flex flex-col gap-6 p-6 md:px-16 md:gap-8'>
         <h1 className='text-2xl md:text-3xl lg:mt-20 w-full text-[#316CE6] font-semibold tracking-tight mt-4 '>Ship Building & Repairs</h1>
         <p>At Helios Shipping and Trading, we provide marine and industrial supplies, including provisions, technical stores, and round-the-clock support at all major Indian ports.</p>
+        <div className='flex flex-col md:flex-row md:my-6 my-4  justify-between items-center'>
+          <Image src='/g12.jpg' alt='shipbuilding' width={400} height={300} className='object-contain md:h-[300px] '/>
+          <Image src='/g17.jpg' alt='shipbuilding' width={400} height={300} className='object-contain md:h-[300px] '/>
+          <Image src='/g14.jpg' alt='shipbuilding' width={400} height={300} className='object-contain md:h-[300px] '/>
+
+        </div>
     </div>
   )
 }

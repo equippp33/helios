@@ -11,9 +11,10 @@ const logos = [
 
 const Companies = () => {
   return (
-    <div className='flex w-full  h-fit md:h-[180px] justify-center items-center rounded-2xl bg-white overflow-hidden'>
+    <div className='flex w-[86.5%] px-2 h-fit md:h-[260px]  flex-col gap-4 justify-center items-center rounded-2xl bg-[#F9F9F9] m-4 overflow-hidden'>
+      <h1 className='md:text-3xl text-xl md:mb-6 md:mt-4 my-2 font-semibold'>Licenses</h1>
       <div className="w-full overflow-hidden">
-        <div className="flex animate-infiniteScroll items-center gap-28 w-max">
+        <div className="flex animate-infiniteScroll items-center md:gap-28 gap-8 w-max">
           {/* First set of logos */}
           {logos.map((logo, index) => (
             <div key={`first-${index}`} className="flex-shrink-0">
