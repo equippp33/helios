@@ -25,12 +25,24 @@
     }
   }
   
+  /* Keyframes for infinite scroll 2 animation */
+  @keyframes infiniteScroll2 {
+    0% {
+      transform: translateX(85vw);
+    }
+    100% {
+      transform: translateX(-90%);
+    }
+  }
 }
 .animate-slideXToFro {
     animation: slideXToFro 10s linear infinite; }
 
 .animate-infiniteScroll {
     animation: infiniteScroll 40s linear infinite; }
+
+.animate-infiniteScroll2 {
+    animation: infiniteScroll2 20s linear infinite; }
 
 @plugin "tailwindcss-animate";
 

@@ -9,7 +9,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 export const metadata: Metadata = {
   title: "Helios Shipping and Trading",
   description: "Developed by Threepointolabs",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/images/favicon.ico" }],
 };
 
 const openSans = Open_Sans({
