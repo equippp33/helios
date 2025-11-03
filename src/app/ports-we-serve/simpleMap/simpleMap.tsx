@@ -229,7 +229,7 @@ export const SimpleIndiaMap = ({ onPortClick }: SimpleIndiaMapProps) => {
             >
               <image
                 ref={(el) => { markerRefs.current[name] = el; }}
-                href={selectedPort === name ? "/shiptrans.png" : "/ship.png"}
+                href={selectedPort === name ? "/images/shiptrans.png" : "/images/ship.png"}
                 x={selectedPort === name ? -21 : -12}
                 y={selectedPort === name ? -21 : -12}
                 width={selectedPort === name ? 42 : 24}

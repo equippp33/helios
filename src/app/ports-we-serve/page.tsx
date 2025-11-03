@@ -126,7 +126,7 @@ const PortsWeServe = () => {
       <Navbar/>
       
       <section className="flex items-center justify-center h-screen bg-cover bg-center "
-               style={{ backgroundImage: "url('/ship.svg')" }}>
+               style={{ backgroundImage: "url('/images/ship.svg')" }}>
         <Sec1/>
       </section>
 

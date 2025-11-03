@@ -7,6 +7,7 @@ const logos = [
   { src: "/images/shipserve.svg", alt: "Shipserve" },
   { src: "/images/iso.svg", alt: "ISO" },
   { src: "/images/fssai.svg", alt: "FSSAI" },
+  { src: "/images/msme.svg", alt: "MSME" },
 ];
 
 const Licenses = () => {

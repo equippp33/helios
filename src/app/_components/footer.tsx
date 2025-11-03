@@ -16,7 +16,7 @@ export default function Footer() {
       alt="Helios Shipping & Trading"
       width={200}
       height={200}
-      className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]"
+      className="w-[100px] h-[100px] md:w-[300px] md:h-[200px]"
     />
         </div>
       
