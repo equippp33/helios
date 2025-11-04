@@ -3,12 +3,19 @@ import React from 'react'
 
 const Imagesection = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden">
       {/* Helios sliding text section */}
-      <div className="absolute top-5 md:top-40 left-0 w-full z-10 pointer-events-none">
-        <h1 className="text-xl md:text-8xl w-fit font-extrabold animate-infiniteScroll2 text-black bg-clip-text ">
-          Helios
-        </h1>
+      <div className="absolute top-5 md:top-40 left-0 w-full z-10 overflow-hidden">
+        <div className="flex whitespace-nowrap animate-infiniteScroll2">
+          {Array(10).fill('Helios').map((text, index) => (
+            <h1
+              key={index}
+              className="text-xl md:text-8xl font-extrabold mx-8 text-black"
+            >
+              {text}
+            </h1>
+          ))}
+        </div>
       </div>
 
       {/* Image section */}
@@ -26,3 +33,4 @@ const Imagesection = () => {
 }
 
 export default Imagesection;
+

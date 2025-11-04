@@ -28,10 +28,10 @@
   /* Keyframes for infinite scroll 2 animation */
   @keyframes infiniteScroll2 {
     0% {
-      transform: translateX(79vw);
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-80%);
+      transform: translateX(-50%);
     }
   }
 }
@@ -42,6 +42,7 @@
     animation: infiniteScroll 40s linear infinite; }
 
 .animate-infiniteScroll2 {
+    display: inline-flex;
     animation: infiniteScroll2 20s linear infinite; }
 
 @plugin "tailwindcss-animate";

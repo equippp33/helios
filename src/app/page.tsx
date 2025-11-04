@@ -18,6 +18,7 @@ import CircularSec from "./gallery/CircularSec";
 import Contact from "./_components/contact";
 import Imagesection from "./_components/Imagesection";
 import Certifications from "./_components/certifications";
+import Groups from "./_components/groups";
 
 
 
@@ -43,6 +44,7 @@ export default async function Home() {
        <section><Shipbuilding /></section>
        <section><Quality /></section>
        <section><Solutions /></section>
+       
        <section className="flex w-full justify-center items-center"><Certifications /></section>
        <section className="flex w-full justify-center items-center"><Licenses /></section>
        <section><Contact /></section>
