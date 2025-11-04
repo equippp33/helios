@@ -5,7 +5,7 @@ const Imagesection = () => {
   return (
     <div className="relative w-full">
       {/* Helios sliding text section */}
-      <div className="absolute top-40 left-0 w-full z-10 pointer-events-none">
+      <div className="absolute top-5 md:top-40 left-0 w-full z-10 pointer-events-none">
         <h1 className="text-xl md:text-8xl w-fit font-extrabold animate-infiniteScroll2 text-black bg-clip-text ">
           Helios
         </h1>
