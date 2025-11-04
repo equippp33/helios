@@ -25,7 +25,7 @@ const Imagesection = () => {
           alt="Helios Hero"
           width={400}
           height={300}
-          className="w-full md:h-[821px] h-[250px] object-cover"
+          className="w-full md:h-[781px] h-[250px] object-cover"
         />
       </div>
     </div>

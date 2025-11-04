@@ -126,9 +126,9 @@ const Hero = () => {
               <span className="md:text-xl text-sm font-bold ">
                 {num.toString().padStart(2, "0")}
               </span>
-              {num === 1 && <p className=''>Get Ship Supplies now</p>}
-              {num === 2 && <p className=''>Partner with Us Today</p>}
-              {num === 3 && <p className=''>Your Marine Logistics Partner</p>}
+              {num === 1 && <p className=''>Welcome to Helios</p>}
+              {num === 2 && <p className=''>Navya Logistics</p>}
+              {num === 3 && <p className=''>Marine Environmental Solutions</p>}
             </button>
           ))}
         </div>
