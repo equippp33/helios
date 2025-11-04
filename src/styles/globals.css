@@ -28,10 +28,10 @@
   /* Keyframes for infinite scroll 2 animation */
   @keyframes infiniteScroll2 {
     0% {
-      transform: translateX(85vw);
+      transform: translateX(79vw);
     }
     100% {
-      transform: translateX(-90%);
+      transform: translateX(-80%);
     }
   }
 }
